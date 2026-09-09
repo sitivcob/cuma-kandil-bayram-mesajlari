@@ -176,9 +176,7 @@
             
             <div class="flex-1 relative w-full max-w-[18rem] sm:max-w-[22rem] lg:max-w-[26rem] mx-auto flex items-center justify-center animate-float z-20">
                 <div class="absolute inset-0 bg-gold/20 blur-[100px] rounded-full z-0 pointer-events-none"></div>
-                <div class="relative z-10 w-full rounded-[2rem] sm:rounded-[2.5rem] overflow-hidden shadow-[0_25px_50px_rgba(0,0,0,0.8)] ring-1 ring-gold/30 bg-black">
-                    <img src="assets/img/tr01.png" alt="Kart Tasarım Ekranı" class="w-full h-auto block">
-                </div>
+                <img src="assets/img/tr01.png" alt="Kart Tasarım Ekranı" class="relative z-10 w-full h-auto drop-shadow-[0_20px_40px_rgba(217,119,6,0.5)]">
             </div>
 
         </div>
@@ -299,7 +297,7 @@
         </div>
     </section>
 
-    <!-- GALERİ (KENDİ PNG'LERİN, ALTIN GLOW EFEKTİ İLE) -->
+    <!-- GALERİ (HİÇBİR ÇERÇEVE, KUTU VE SİYAH ARKA PLAN YOK - SADECE SAF PNG VE GÖLGE) -->
     <section id="galeri" class="py-24 glass-card border-t border-emerald-900/50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
@@ -307,62 +305,47 @@
                 <p class="text-emerald-200/70 max-w-2xl mx-auto text-lg font-light">Sade, asil ve kullanıcı dostu arayüzü ile aradığınızı anında bulun.</p>
             </div>
 
-            <div class="flex overflow-x-auto gap-6 pb-10 hide-scroll snap-x snap-mandatory lg:grid lg:grid-cols-4 lg:gap-8 lg:overflow-visible">
+            <!-- TERTEMİZ YATAY KAYDIRILABİLİR PNG GALERİSİ -->
+            <div class="flex overflow-x-auto gap-4 pb-10 hide-scroll snap-x snap-mandatory lg:grid lg:grid-cols-4 lg:gap-8 lg:overflow-visible">
                 
-                <div class="shrink-0 w-60 lg:w-full snap-center flex flex-col items-center group cursor-pointer">
-                    <div class="w-full rounded-[1.5rem] sm:rounded-[2rem] overflow-hidden shadow-[0_15px_30px_rgba(0,0,0,0.6)] ring-1 ring-gold/30 group-hover:-translate-y-2 transition-transform duration-500 bg-black">
-                        <img src="assets/img/tr01.png" alt="Tasarım Aracı" class="w-full h-auto block">
-                    </div>
-                    <h4 class="mt-6 font-serif font-bold text-lightGold text-lg">Görsel Tasarım Aracı</h4>
+                <div class="shrink-0 w-64 lg:w-full snap-center flex flex-col items-center group cursor-pointer p-2">
+                    <img src="assets/img/tr01.png" alt="Tasarım Aracı" class="w-full h-auto drop-shadow-[0_15px_25px_rgba(0,0,0,0.5)] group-hover:drop-shadow-[0_20px_40px_rgba(217,119,6,0.6)] group-hover:-translate-y-4 group-hover:scale-105 transition-all duration-500">
+                    <h4 class="mt-6 font-serif font-bold text-lightGold text-lg group-hover:text-gold transition-colors">Görsel Tasarım Aracı</h4>
                 </div>
 
-                <div class="shrink-0 w-60 lg:w-full snap-center flex flex-col items-center group cursor-pointer">
-                    <div class="w-full rounded-[1.5rem] sm:rounded-[2rem] overflow-hidden shadow-[0_15px_30px_rgba(0,0,0,0.6)] ring-1 ring-gold/30 group-hover:-translate-y-2 transition-transform duration-500 bg-black">
-                        <img src="assets/img/tr02.png" alt="Yazı Ayarları" class="w-full h-auto block">
-                    </div>
-                    <h4 class="mt-6 font-serif font-bold text-lightGold text-lg">Detaylı Yazı Ayarları</h4>
+                <div class="shrink-0 w-64 lg:w-full snap-center flex flex-col items-center group cursor-pointer p-2">
+                    <img src="assets/img/tr02.png" alt="Yazı Ayarları" class="w-full h-auto drop-shadow-[0_15px_25px_rgba(0,0,0,0.5)] group-hover:drop-shadow-[0_20px_40px_rgba(217,119,6,0.6)] group-hover:-translate-y-4 group-hover:scale-105 transition-all duration-500">
+                    <h4 class="mt-6 font-serif font-bold text-lightGold text-lg group-hover:text-gold transition-colors">Detaylı Yazı Ayarları</h4>
                 </div>
 
-                <div class="shrink-0 w-60 lg:w-full snap-center flex flex-col items-center group cursor-pointer">
-                    <div class="w-full rounded-[1.5rem] sm:rounded-[2rem] overflow-hidden shadow-[0_15px_30px_rgba(0,0,0,0.6)] ring-1 ring-gold/30 group-hover:-translate-y-2 transition-transform duration-500 bg-black">
-                        <img src="assets/img/tr03.png" alt="Arka Planlar" class="w-full h-auto block">
-                    </div>
-                    <h4 class="mt-6 font-serif font-bold text-lightGold text-lg">Yüzlerce Arka Plan</h4>
+                <div class="shrink-0 w-64 lg:w-full snap-center flex flex-col items-center group cursor-pointer p-2">
+                    <img src="assets/img/tr03.png" alt="Arka Planlar" class="w-full h-auto drop-shadow-[0_15px_25px_rgba(0,0,0,0.5)] group-hover:drop-shadow-[0_20px_40px_rgba(217,119,6,0.6)] group-hover:-translate-y-4 group-hover:scale-105 transition-all duration-500">
+                    <h4 class="mt-6 font-serif font-bold text-lightGold text-lg group-hover:text-gold transition-colors">Yüzlerce Arka Plan</h4>
                 </div>
 
-                <div class="shrink-0 w-60 lg:w-full snap-center flex flex-col items-center group cursor-pointer">
-                    <div class="w-full rounded-[1.5rem] sm:rounded-[2rem] overflow-hidden shadow-[0_15px_30px_rgba(0,0,0,0.6)] ring-1 ring-gold/30 group-hover:-translate-y-2 transition-transform duration-500 bg-black">
-                        <img src="assets/img/tr04.png" alt="Menü" class="w-full h-auto block">
-                    </div>
-                    <h4 class="mt-6 font-serif font-bold text-lightGold text-lg">Geniş Menü</h4>
+                <div class="shrink-0 w-64 lg:w-full snap-center flex flex-col items-center group cursor-pointer p-2">
+                    <img src="assets/img/tr04.png" alt="Menü" class="w-full h-auto drop-shadow-[0_15px_25px_rgba(0,0,0,0.5)] group-hover:drop-shadow-[0_20px_40px_rgba(217,119,6,0.6)] group-hover:-translate-y-4 group-hover:scale-105 transition-all duration-500">
+                    <h4 class="mt-6 font-serif font-bold text-lightGold text-lg group-hover:text-gold transition-colors">Geniş Menü</h4>
                 </div>
 
-                <div class="shrink-0 w-60 lg:w-full snap-center flex flex-col items-center group cursor-pointer">
-                    <div class="w-full rounded-[1.5rem] sm:rounded-[2rem] overflow-hidden shadow-[0_15px_30px_rgba(0,0,0,0.6)] ring-1 ring-gold/30 group-hover:-translate-y-2 transition-transform duration-500 bg-black">
-                        <img src="assets/img/tr05.png" alt="Cuma Mesajları" class="w-full h-auto block">
-                    </div>
-                    <h4 class="mt-6 font-serif font-bold text-lightGold text-lg">Hazır Cuma Mesajları</h4>
+                <div class="shrink-0 w-64 lg:w-full snap-center flex flex-col items-center group cursor-pointer p-2">
+                    <img src="assets/img/tr05.png" alt="Cuma Mesajları" class="w-full h-auto drop-shadow-[0_15px_25px_rgba(0,0,0,0.5)] group-hover:drop-shadow-[0_20px_40px_rgba(217,119,6,0.6)] group-hover:-translate-y-4 group-hover:scale-105 transition-all duration-500">
+                    <h4 class="mt-6 font-serif font-bold text-lightGold text-lg group-hover:text-gold transition-colors">Hazır Cuma Mesajları</h4>
                 </div>
 
-                <div class="shrink-0 w-60 lg:w-full snap-center flex flex-col items-center group cursor-pointer">
-                    <div class="w-full rounded-[1.5rem] sm:rounded-[2rem] overflow-hidden shadow-[0_15px_30px_rgba(0,0,0,0.6)] ring-1 ring-gold/30 group-hover:-translate-y-2 transition-transform duration-500 bg-black">
-                        <img src="assets/img/tr06.png" alt="Dualar" class="w-full h-auto block">
-                    </div>
-                    <h4 class="mt-6 font-serif font-bold text-lightGold text-lg">Dualar & Sözler</h4>
+                <div class="shrink-0 w-64 lg:w-full snap-center flex flex-col items-center group cursor-pointer p-2">
+                    <img src="assets/img/tr06.png" alt="Dualar" class="w-full h-auto drop-shadow-[0_15px_25px_rgba(0,0,0,0.5)] group-hover:drop-shadow-[0_20px_40px_rgba(217,119,6,0.6)] group-hover:-translate-y-4 group-hover:scale-105 transition-all duration-500">
+                    <h4 class="mt-6 font-serif font-bold text-lightGold text-lg group-hover:text-gold transition-colors">Dualar & Sözler</h4>
                 </div>
 
-                <div class="shrink-0 w-60 lg:w-full snap-center flex flex-col items-center group cursor-pointer">
-                    <div class="w-full rounded-[1.5rem] sm:rounded-[2rem] overflow-hidden shadow-[0_15px_30px_rgba(0,0,0,0.6)] ring-1 ring-gold/30 group-hover:-translate-y-2 transition-transform duration-500 bg-black">
-                        <img src="assets/img/tr07.png" alt="Bayramlar" class="w-full h-auto block">
-                    </div>
-                    <h4 class="mt-6 font-serif font-bold text-lightGold text-lg">Bayram Mesajları</h4>
+                <div class="shrink-0 w-64 lg:w-full snap-center flex flex-col items-center group cursor-pointer p-2">
+                    <img src="assets/img/tr07.png" alt="Bayramlar" class="w-full h-auto drop-shadow-[0_15px_25px_rgba(0,0,0,0.5)] group-hover:drop-shadow-[0_20px_40px_rgba(217,119,6,0.6)] group-hover:-translate-y-4 group-hover:scale-105 transition-all duration-500">
+                    <h4 class="mt-6 font-serif font-bold text-lightGold text-lg group-hover:text-gold transition-colors">Bayram Mesajları</h4>
                 </div>
 
-                <div class="shrink-0 w-60 lg:w-full snap-center flex flex-col items-center group cursor-pointer">
-                    <div class="w-full rounded-[1.5rem] sm:rounded-[2rem] overflow-hidden shadow-[0_15px_30px_rgba(0,0,0,0.6)] ring-1 ring-gold/30 group-hover:-translate-y-2 transition-transform duration-500 bg-black">
-                        <img src="assets/img/tr08.png" alt="Kandiller" class="w-full h-auto block">
-                    </div>
-                    <h4 class="mt-6 font-serif font-bold text-lightGold text-lg">Kandil Tebrikleri</h4>
+                <div class="shrink-0 w-64 lg:w-full snap-center flex flex-col items-center group cursor-pointer p-2">
+                    <img src="assets/img/tr08.png" alt="Kandiller" class="w-full h-auto drop-shadow-[0_15px_25px_rgba(0,0,0,0.5)] group-hover:drop-shadow-[0_20px_40px_rgba(217,119,6,0.6)] group-hover:-translate-y-4 group-hover:scale-105 transition-all duration-500">
+                    <h4 class="mt-6 font-serif font-bold text-lightGold text-lg group-hover:text-gold transition-colors">Kandil Tebrikleri</h4>
                 </div>
 
             </div>
