@@ -34,7 +34,7 @@
         }
     </script>
 
-    <!-- Yepyeni Zümrüt & Altın Tema Ayarları -->
+    <!-- Zümrüt & Altın Tema Ayarları -->
     <script>
         tailwind.config = {
             theme: {
@@ -44,13 +44,13 @@
                         serif: ['Playfair Display', 'serif'] 
                     },
                     colors: { 
-                        deepGreen: '#022c22',    /* Koyu Zümrüt Arkaplan */
-                        cardGreen: '#064e3b',    /* Kart Arkaplanı */
-                        gold: '#d97706',         /* Ana Altın Rengi */
-                        lightGold: '#fde68a'     /* Açık Altın (Metinler için) */
+                        deepGreen: '#022c22',    
+                        cardGreen: '#064e3b',    
+                        gold: '#d97706',         
+                        lightGold: '#fde68a'     
                     },
                     animation: {
-                        'float': 'float 6s ease-in-out infinite', /* Zarif Süzülme Animasyonu */
+                        'float': 'float 6s ease-in-out infinite', 
                     },
                     keyframes: {
                         float: {
@@ -73,7 +73,7 @@
 </head>
 <body class="bg-deepGreen text-gray-200 font-sans antialiased selection:bg-gold selection:text-white relative overflow-x-hidden">
 
-    <!-- Mistk Ortam Işıkları -->
+    <!-- Mistik Ortam Işıkları -->
     <div class="fixed top-[-20%] left-[-10%] w-[50%] h-[50%] rounded-full bg-gold/10 blur-[150px] pointer-events-none -z-10"></div>
     <div class="fixed bottom-[-20%] right-[-10%] w-[50%] h-[50%] rounded-full bg-emerald-500/10 blur-[150px] pointer-events-none -z-10"></div>
 
@@ -82,7 +82,6 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-24">
                 
-                <!-- Logo ve Başlık -->
                 <div class="flex items-center gap-4 hover:scale-105 transition-transform duration-300">
                     <img src="ckblogo.png" alt="Uygulama Logosu" class="h-12 lg:h-14 w-auto object-contain rounded-xl shadow-[0_0_15px_rgba(217,119,6,0.4)] border border-gold/30">
                     <div class="hidden sm:flex flex-col">
@@ -91,7 +90,6 @@
                     </div>
                 </div>
                 
-                <!-- Masaüstü Navigasyon ve Diller -->
                 <div class="hidden md:flex space-x-6 items-center">
                     <a href="#ozellikler" class="text-emerald-100 hover:text-lightGold transition font-medium">Özellikler</a>
                     <a href="#kategoriler" class="text-emerald-100 hover:text-lightGold transition font-medium">Kategoriler</a>
@@ -103,15 +101,15 @@
                             <span class="tooltip-text absolute top-10 bg-deepGreen border border-gold/50 text-lightGold text-xs font-bold px-3 py-1.5 rounded-lg shadow-xl whitespace-nowrap">Türkçe</span>
                         </div>
                         <div class="w-px h-5 bg-emerald-800 mx-1"></div>
-                        <a href="en.html" class="group relative flex flex-col items-center opacity-60 hover:opacity-100 transition hover:scale-110"><span class="fi fi-gb rounded-full"></span><span class="tooltip-text absolute top-10 bg-deepGreen border border-gold/50 text-white text-xs px-2 py-1 rounded-lg whitespace-nowrap">English</span></a>
-                        <a href="de.html" class="group relative flex flex-col items-center opacity-60 hover:opacity-100 transition hover:scale-110"><span class="fi fi-de rounded-full"></span><span class="tooltip-text absolute top-10 bg-deepGreen border border-gold/50 text-white text-xs px-2 py-1 rounded-lg whitespace-nowrap">Deutsch</span></a>
-                        <a href="fr.html" class="group relative flex flex-col items-center opacity-60 hover:opacity-100 transition hover:scale-110"><span class="fi fi-fr rounded-full"></span><span class="tooltip-text absolute top-10 bg-deepGreen border border-gold/50 text-white text-xs px-2 py-1 rounded-lg whitespace-nowrap">Français</span></a>
-                        <a href="ar.html" class="group relative flex flex-col items-center opacity-60 hover:opacity-100 transition hover:scale-110"><span class="fi fi-sa rounded-full"></span><span class="tooltip-text absolute top-10 bg-deepGreen border border-gold/50 text-white text-xs px-2 py-1 rounded-lg whitespace-nowrap">العربية</span></a>
-                        <a href="fa.html" class="group relative flex flex-col items-center opacity-60 hover:opacity-100 transition hover:scale-110"><span class="fi fi-ir rounded-full"></span><span class="tooltip-text absolute top-10 bg-deepGreen border border-gold/50 text-white text-xs px-2 py-1 rounded-lg whitespace-nowrap">فارسی</span></a>
-                        <a href="ur.html" class="group relative flex flex-col items-center opacity-60 hover:opacity-100 transition hover:scale-110"><span class="fi fi-pk rounded-full"></span><span class="tooltip-text absolute top-10 bg-deepGreen border border-gold/50 text-white text-xs px-2 py-1 rounded-lg whitespace-nowrap">اردو</span></a>
-                        <a href="hi.html" class="group relative flex flex-col items-center opacity-60 hover:opacity-100 transition hover:scale-110"><span class="fi fi-in rounded-full"></span><span class="tooltip-text absolute top-10 bg-deepGreen border border-gold/50 text-white text-xs px-2 py-1 rounded-lg whitespace-nowrap">हिन्दी</span></a>
-                        <a href="id.html" class="group relative flex flex-col items-center opacity-60 hover:opacity-100 transition hover:scale-110"><span class="fi fi-id rounded-full"></span><span class="tooltip-text absolute top-10 bg-deepGreen border border-gold/50 text-white text-xs px-2 py-1 rounded-lg whitespace-nowrap">Indonesia</span></a>
-                        <a href="ru.html" class="group relative flex flex-col items-center opacity-60 hover:opacity-100 transition hover:scale-110"><span class="fi fi-ru rounded-full"></span><span class="tooltip-text absolute top-10 bg-deepGreen border border-gold/50 text-white text-xs px-2 py-1 rounded-lg whitespace-nowrap">Русский</span></a>
+                        <a href="en.html" class="group relative flex flex-col items-center opacity-60 hover:opacity-100 transition hover:scale-110"><span class="fi fi-gb rounded-full"></span></a>
+                        <a href="de.html" class="group relative flex flex-col items-center opacity-60 hover:opacity-100 transition hover:scale-110"><span class="fi fi-de rounded-full"></span></a>
+                        <a href="fr.html" class="group relative flex flex-col items-center opacity-60 hover:opacity-100 transition hover:scale-110"><span class="fi fi-fr rounded-full"></span></a>
+                        <a href="ar.html" class="group relative flex flex-col items-center opacity-60 hover:opacity-100 transition hover:scale-110"><span class="fi fi-sa rounded-full"></span></a>
+                        <a href="fa.html" class="group relative flex flex-col items-center opacity-60 hover:opacity-100 transition hover:scale-110"><span class="fi fi-ir rounded-full"></span></a>
+                        <a href="ur.html" class="group relative flex flex-col items-center opacity-60 hover:opacity-100 transition hover:scale-110"><span class="fi fi-pk rounded-full"></span></a>
+                        <a href="hi.html" class="group relative flex flex-col items-center opacity-60 hover:opacity-100 transition hover:scale-110"><span class="fi fi-in rounded-full"></span></a>
+                        <a href="id.html" class="group relative flex flex-col items-center opacity-60 hover:opacity-100 transition hover:scale-110"><span class="fi fi-id rounded-full"></span></a>
+                        <a href="ru.html" class="group relative flex flex-col items-center opacity-60 hover:opacity-100 transition hover:scale-110"><span class="fi fi-ru rounded-full"></span></a>
                     </div>
                 </div>
 
@@ -177,10 +175,19 @@
                 </div>
             </div>
             
-            <div class="flex-1 relative w-full max-w-[18rem] sm:max-w-[22rem] lg:max-w-sm mx-auto flex items-center justify-center animate-float">
+            <!-- GERÇEK MOCKUP İLE VİTRİN EKRANI -->
+            <div class="flex-1 relative w-full max-w-[18rem] sm:max-w-[20rem] lg:max-w-[22rem] mx-auto flex items-center justify-center animate-float z-20">
                 <div class="absolute inset-0 bg-gold/20 blur-[100px] rounded-full z-0 pointer-events-none"></div>
-                <div class="relative z-10 p-2 rounded-[2.5rem] bg-gradient-to-b from-gold/50 to-emerald-900/50 shadow-[0_20px_50px_rgba(0,0,0,0.8)] border border-gold/30">
-                    <img src="tr01.png" alt="Kart Tasarım Ekranı" class="w-full h-auto rounded-[2rem]">
+                
+                <!-- Mockup Konteyneri -->
+                <div class="relative w-full">
+                    <!-- Telefon Çerçevesi (En üstte, cam gibi durur) -->
+                    <img src="mockup.png" alt="Phone Frame" class="relative z-20 w-full h-auto drop-shadow-2xl pointer-events-none">
+                    
+                    <!-- Uygulama Ekranı (Telefonun içine oturur. Eğer çerçevene tam uymazsa aşağıdaki top/bottom/left/right % değerlerini ufak ufak değiştirebilirsin) -->
+                    <div class="absolute top-[2.5%] bottom-[2.5%] left-[5.5%] right-[5.5%] z-10 overflow-hidden rounded-[2rem] bg-black">
+                        <img src="tr01.png" alt="Kart Tasarım Ekranı" class="w-full h-full object-cover">
+                    </div>
                 </div>
             </div>
 
@@ -196,7 +203,6 @@
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Özellik 1 -->
                 <div class="bg-deepGreen/80 p-8 rounded-[2rem] border border-emerald-800/60 hover:border-gold/50 hover:bg-cardGreen/50 transition-all duration-500 group shadow-lg">
                     <div class="w-16 h-16 bg-gold/10 rounded-2xl flex items-center justify-center text-gold text-3xl mb-6 group-hover:scale-110 transition-transform shadow-[0_0_20px_rgba(217,119,6,0.15)]">
                         <i class="fa-solid fa-palette"></i>
@@ -206,7 +212,6 @@
                         Seçtiğiniz yazılı mesaja en uygun arka planı ekleyerek kendi özel resimli tebrik kartınızı oluşturun. Zengin yazı fontları ve kartın köşesine kendi imzanızı ekleme özelliğiyle tamamen kişiselleştirin.
                     </p>
                 </div>
-                <!-- Özellik 2 -->
                 <div class="bg-deepGreen/80 p-8 rounded-[2rem] border border-emerald-800/60 hover:border-gold/50 hover:bg-cardGreen/50 transition-all duration-500 group shadow-lg">
                     <div class="w-16 h-16 bg-gold/10 rounded-2xl flex items-center justify-center text-gold text-3xl mb-6 group-hover:scale-110 transition-transform shadow-[0_0_20px_rgba(217,119,6,0.15)]">
                         <i class="fa-solid fa-images"></i>
@@ -216,7 +221,6 @@
                         Yüzlerce yüksek çözünürlüklü, özenle tasarlanmış hazır resimli Cuma, Kandil, Günaydın ve İyi Geceler mesajları parmaklarınızın ucunda. Tek tıkla galeriden seçin ve anında paylaşın.
                     </p>
                 </div>
-                <!-- Özellik 3 -->
                 <div class="bg-deepGreen/80 p-8 rounded-[2rem] border border-emerald-800/60 hover:border-gold/50 hover:bg-cardGreen/50 transition-all duration-500 group shadow-lg">
                     <div class="w-16 h-16 bg-gold/10 rounded-2xl flex items-center justify-center text-gold text-3xl mb-6 group-hover:scale-110 transition-transform shadow-[0_0_20px_rgba(217,119,6,0.15)]">
                         <i class="fa-brands fa-whatsapp"></i>
@@ -226,7 +230,6 @@
                         Beğendiğiniz resimli mesajları doğrudan telefonunuza indirin veya hiçbir kalite kaybı yaşamadan WhatsApp durum (Status), Instagram hikaye (Story) veya Facebook üzerinden sevdiklerinize iletin.
                     </p>
                 </div>
-                <!-- Özellik 4 -->
                 <div class="bg-deepGreen/80 p-8 rounded-[2rem] border border-emerald-800/60 hover:border-gold/50 hover:bg-cardGreen/50 transition-all duration-500 group shadow-lg">
                     <div class="w-16 h-16 bg-gold/10 rounded-2xl flex items-center justify-center text-gold text-3xl mb-6 group-hover:scale-110 transition-transform shadow-[0_0_20px_rgba(217,119,6,0.15)]">
                         <i class="fa-solid fa-globe"></i>
@@ -236,7 +239,6 @@
                         Türkçe, İngilizce, Arapça, Urduca, Fransızca, Rusça, Hintçe, Farsça ve Endonezce olmak üzere toplam 10 farklı dil seçeneği ile dünyanın dört bir yanındaki sevdiklerinize ulaşıp tebrikleşin.
                     </p>
                 </div>
-                <!-- Özellik 5 -->
                 <div class="bg-deepGreen/80 p-8 rounded-[2rem] border border-emerald-800/60 hover:border-gold/50 hover:bg-cardGreen/50 transition-all duration-500 group shadow-lg">
                     <div class="w-16 h-16 bg-gold/10 rounded-2xl flex items-center justify-center text-gold text-3xl mb-6 group-hover:scale-110 transition-transform shadow-[0_0_20px_rgba(217,119,6,0.15)]">
                         <i class="fa-regular fa-calendar-check"></i>
@@ -246,7 +248,6 @@
                         Yaklaşan tüm dini günleri, kandilleri ve bayramları tek bir ekrandan kolayca takip edin. Hatırlatıcı bildirimler sayesinde sevdiklerinizin hiçbir özel gününü kaçırmayın.
                     </p>
                 </div>
-                <!-- Özellik 6 -->
                 <div class="bg-deepGreen/80 p-8 rounded-[2rem] border border-emerald-800/60 hover:border-gold/50 hover:bg-cardGreen/50 transition-all duration-500 group shadow-lg">
                     <div class="w-16 h-16 bg-gold/10 rounded-2xl flex items-center justify-center text-gold text-3xl mb-6 group-hover:scale-110 transition-transform shadow-[0_0_20px_rgba(217,119,6,0.15)]">
                         <i class="fa-solid fa-book-open"></i>
@@ -308,7 +309,7 @@
         </div>
     </section>
 
-    <!-- GALERİ -->
+    <!-- GALERİ (GERÇEK MOCKUP İLE) -->
     <section id="galeri" class="py-24 glass-card border-t border-emerald-900/50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
@@ -316,60 +317,93 @@
                 <p class="text-emerald-200/70 max-w-2xl mx-auto text-lg font-light">Sade, asil ve kullanıcı dostu arayüzü ile aradığınızı anında bulun.</p>
             </div>
 
-            <div class="flex overflow-x-auto gap-8 pb-10 hide-scroll snap-x snap-mandatory lg:grid lg:grid-cols-4 lg:overflow-visible">
+            <!-- Yatay Kaydırılabilir Mockuplı Galeri -->
+            <div class="flex overflow-x-auto gap-6 pb-10 hide-scroll snap-x snap-mandatory lg:grid lg:grid-cols-4 lg:gap-8 lg:overflow-visible">
                 
-                <div class="shrink-0 w-64 lg:w-full snap-center flex flex-col items-center group">
-                    <div class="relative p-1.5 rounded-[2.5rem] bg-gradient-to-b from-gold/30 to-transparent shadow-[0_15px_35px_rgba(0,0,0,0.5)]">
-                        <img src="tr01.png" alt="Kart Tasarım Ekranı" class="w-full rounded-[2rem] object-contain group-hover:scale-[1.02] transition-transform duration-500">
+                <!-- Mockup 1 -->
+                <div class="shrink-0 w-60 lg:w-full snap-center flex flex-col items-center group cursor-pointer">
+                    <div class="relative w-full group-hover:-translate-y-2 transition-transform duration-500">
+                        <img src="mockup.png" alt="Phone Frame" class="relative z-20 w-full h-auto drop-shadow-[0_15px_30px_rgba(0,0,0,0.6)] pointer-events-none">
+                        <div class="absolute top-[2.5%] bottom-[2.5%] left-[5.5%] right-[5.5%] z-10 overflow-hidden rounded-[1.5rem] sm:rounded-[2rem] bg-black">
+                            <img src="tr01.png" alt="Tasarım Aracı" class="w-full h-full object-cover">
+                        </div>
                     </div>
                     <h4 class="mt-6 font-serif font-bold text-lightGold text-lg">Görsel Tasarım Aracı</h4>
                 </div>
 
-                <div class="shrink-0 w-64 lg:w-full snap-center flex flex-col items-center group">
-                    <div class="relative p-1.5 rounded-[2.5rem] bg-gradient-to-b from-gold/30 to-transparent shadow-[0_15px_35px_rgba(0,0,0,0.5)]">
-                        <img src="tr02.png" alt="Arka Plan Seçimi" class="w-full rounded-[2rem] object-contain group-hover:scale-[1.02] transition-transform duration-500">
+                <!-- Mockup 2 -->
+                <div class="shrink-0 w-60 lg:w-full snap-center flex flex-col items-center group cursor-pointer">
+                    <div class="relative w-full group-hover:-translate-y-2 transition-transform duration-500">
+                        <img src="mockup.png" alt="Phone Frame" class="relative z-20 w-full h-auto drop-shadow-[0_15px_30px_rgba(0,0,0,0.6)] pointer-events-none">
+                        <div class="absolute top-[2.5%] bottom-[2.5%] left-[5.5%] right-[5.5%] z-10 overflow-hidden rounded-[1.5rem] sm:rounded-[2rem] bg-black">
+                            <img src="tr02.png" alt="Yazı Ayarları" class="w-full h-full object-cover">
+                        </div>
                     </div>
                     <h4 class="mt-6 font-serif font-bold text-lightGold text-lg">Detaylı Yazı Ayarları</h4>
                 </div>
 
-                <div class="shrink-0 w-64 lg:w-full snap-center flex flex-col items-center group">
-                    <div class="relative p-1.5 rounded-[2.5rem] bg-gradient-to-b from-gold/30 to-transparent shadow-[0_15px_35px_rgba(0,0,0,0.5)]">
-                        <img src="tr03.png" alt="Premium Arka Planlar" class="w-full rounded-[2rem] object-contain group-hover:scale-[1.02] transition-transform duration-500">
+                <!-- Mockup 3 -->
+                <div class="shrink-0 w-60 lg:w-full snap-center flex flex-col items-center group cursor-pointer">
+                    <div class="relative w-full group-hover:-translate-y-2 transition-transform duration-500">
+                        <img src="mockup.png" alt="Phone Frame" class="relative z-20 w-full h-auto drop-shadow-[0_15px_30px_rgba(0,0,0,0.6)] pointer-events-none">
+                        <div class="absolute top-[2.5%] bottom-[2.5%] left-[5.5%] right-[5.5%] z-10 overflow-hidden rounded-[1.5rem] sm:rounded-[2rem] bg-black">
+                            <img src="tr03.png" alt="Arka Planlar" class="w-full h-full object-cover">
+                        </div>
                     </div>
                     <h4 class="mt-6 font-serif font-bold text-lightGold text-lg">Yüzlerce Arka Plan</h4>
                 </div>
 
-                <div class="shrink-0 w-64 lg:w-full snap-center flex flex-col items-center group">
-                    <div class="relative p-1.5 rounded-[2.5rem] bg-gradient-to-b from-gold/30 to-transparent shadow-[0_15px_35px_rgba(0,0,0,0.5)]">
-                        <img src="tr04.png" alt="Ana Menü" class="w-full rounded-[2rem] object-contain group-hover:scale-[1.02] transition-transform duration-500">
+                <!-- Mockup 4 -->
+                <div class="shrink-0 w-60 lg:w-full snap-center flex flex-col items-center group cursor-pointer">
+                    <div class="relative w-full group-hover:-translate-y-2 transition-transform duration-500">
+                        <img src="mockup.png" alt="Phone Frame" class="relative z-20 w-full h-auto drop-shadow-[0_15px_30px_rgba(0,0,0,0.6)] pointer-events-none">
+                        <div class="absolute top-[2.5%] bottom-[2.5%] left-[5.5%] right-[5.5%] z-10 overflow-hidden rounded-[1.5rem] sm:rounded-[2rem] bg-black">
+                            <img src="tr04.png" alt="Menü" class="w-full h-full object-cover">
+                        </div>
                     </div>
                     <h4 class="mt-6 font-serif font-bold text-lightGold text-lg">Geniş Menü</h4>
                 </div>
 
-                <div class="shrink-0 w-64 lg:w-full snap-center flex flex-col items-center group">
-                    <div class="relative p-1.5 rounded-[2.5rem] bg-gradient-to-b from-gold/30 to-transparent shadow-[0_15px_35px_rgba(0,0,0,0.5)]">
-                        <img src="tr05.png" alt="Cuma Mesajları" class="w-full rounded-[2rem] object-contain group-hover:scale-[1.02] transition-transform duration-500">
+                <!-- Mockup 5 -->
+                <div class="shrink-0 w-60 lg:w-full snap-center flex flex-col items-center group cursor-pointer">
+                    <div class="relative w-full group-hover:-translate-y-2 transition-transform duration-500">
+                        <img src="mockup.png" alt="Phone Frame" class="relative z-20 w-full h-auto drop-shadow-[0_15px_30px_rgba(0,0,0,0.6)] pointer-events-none">
+                        <div class="absolute top-[2.5%] bottom-[2.5%] left-[5.5%] right-[5.5%] z-10 overflow-hidden rounded-[1.5rem] sm:rounded-[2rem] bg-black">
+                            <img src="tr05.png" alt="Cuma Mesajları" class="w-full h-full object-cover">
+                        </div>
                     </div>
                     <h4 class="mt-6 font-serif font-bold text-lightGold text-lg">Hazır Cuma Mesajları</h4>
                 </div>
 
-                <div class="shrink-0 w-64 lg:w-full snap-center flex flex-col items-center group">
-                    <div class="relative p-1.5 rounded-[2.5rem] bg-gradient-to-b from-gold/30 to-transparent shadow-[0_15px_35px_rgba(0,0,0,0.5)]">
-                        <img src="tr06.png" alt="Mübarek Sözler" class="w-full rounded-[2rem] object-contain group-hover:scale-[1.02] transition-transform duration-500">
+                <!-- Mockup 6 -->
+                <div class="shrink-0 w-60 lg:w-full snap-center flex flex-col items-center group cursor-pointer">
+                    <div class="relative w-full group-hover:-translate-y-2 transition-transform duration-500">
+                        <img src="mockup.png" alt="Phone Frame" class="relative z-20 w-full h-auto drop-shadow-[0_15px_30px_rgba(0,0,0,0.6)] pointer-events-none">
+                        <div class="absolute top-[2.5%] bottom-[2.5%] left-[5.5%] right-[5.5%] z-10 overflow-hidden rounded-[1.5rem] sm:rounded-[2rem] bg-black">
+                            <img src="tr06.png" alt="Dualar" class="w-full h-full object-cover">
+                        </div>
                     </div>
                     <h4 class="mt-6 font-serif font-bold text-lightGold text-lg">Dualar & Sözler</h4>
                 </div>
 
-                <div class="shrink-0 w-64 lg:w-full snap-center flex flex-col items-center group">
-                    <div class="relative p-1.5 rounded-[2.5rem] bg-gradient-to-b from-gold/30 to-transparent shadow-[0_15px_35px_rgba(0,0,0,0.5)]">
-                        <img src="tr07.png" alt="Dini Bayramlar" class="w-full rounded-[2rem] object-contain group-hover:scale-[1.02] transition-transform duration-500">
+                <!-- Mockup 7 -->
+                <div class="shrink-0 w-60 lg:w-full snap-center flex flex-col items-center group cursor-pointer">
+                    <div class="relative w-full group-hover:-translate-y-2 transition-transform duration-500">
+                        <img src="mockup.png" alt="Phone Frame" class="relative z-20 w-full h-auto drop-shadow-[0_15px_30px_rgba(0,0,0,0.6)] pointer-events-none">
+                        <div class="absolute top-[2.5%] bottom-[2.5%] left-[5.5%] right-[5.5%] z-10 overflow-hidden rounded-[1.5rem] sm:rounded-[2rem] bg-black">
+                            <img src="tr07.png" alt="Bayramlar" class="w-full h-full object-cover">
+                        </div>
                     </div>
                     <h4 class="mt-6 font-serif font-bold text-lightGold text-lg">Bayram Mesajları</h4>
                 </div>
 
-                <div class="shrink-0 w-64 lg:w-full snap-center flex flex-col items-center group">
-                    <div class="relative p-1.5 rounded-[2.5rem] bg-gradient-to-b from-gold/30 to-transparent shadow-[0_15px_35px_rgba(0,0,0,0.5)]">
-                        <img src="tr08.png" alt="Kandil Mesajları" class="w-full rounded-[2rem] object-contain group-hover:scale-[1.02] transition-transform duration-500">
+                <!-- Mockup 8 -->
+                <div class="shrink-0 w-60 lg:w-full snap-center flex flex-col items-center group cursor-pointer">
+                    <div class="relative w-full group-hover:-translate-y-2 transition-transform duration-500">
+                        <img src="mockup.png" alt="Phone Frame" class="relative z-20 w-full h-auto drop-shadow-[0_15px_30px_rgba(0,0,0,0.6)] pointer-events-none">
+                        <div class="absolute top-[2.5%] bottom-[2.5%] left-[5.5%] right-[5.5%] z-10 overflow-hidden rounded-[1.5rem] sm:rounded-[2rem] bg-black">
+                            <img src="tr08.png" alt="Kandiller" class="w-full h-full object-cover">
+                        </div>
                     </div>
                     <h4 class="mt-6 font-serif font-bold text-lightGold text-lg">Kandil Tebrikleri</h4>
                 </div>
