@@ -3,22 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cuma Kandil Bayram Mesajları | Kendi Kartını Tasarla</title>
-    <meta name="description" content="En güzel resimli Cuma, Kandil ve Bayram mesajları. Kendi tebrik kartını tasarla, yüksek çözünürlüklü arkaplanlarla sevdiklerine gönder.">
+    <title>Cuma Kandil Bayram Mesajları | Resimli Tebrik Kartı Tasarla</title>
+    <meta name="description" content="En güzel resimli Cuma, Kandil ve Bayram mesajları. Kendi tebrik kartınızı tasarlayın, WhatsApp ve Instagram'da ücretsiz paylaşın. Binlerce güncel içerik.">
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Google Fonts: Playfair Display (Asil Başlıklar) & Outfit (Modern Metinler) -->
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,500&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
     
     <!-- FontAwesome (İkonlar) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- Flag Icons (Bayraklar) -->
+    <!-- Bayrak İkonları -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.0.0/css/flag-icons.min.css"/>
 
-    <!-- Otomatik Dil Yönlendirme (Global Kitle İçin) -->
+    <!-- Otomatik Dil Yönlendirme -->
     <script>
         if (!sessionStorage.getItem('langRedirected') && (window.location.pathname === '/' || window.location.pathname.endsWith('index.html'))) {
             sessionStorage.setItem('langRedirected', 'true');
@@ -34,18 +34,20 @@
         }
     </script>
 
-    <!-- Zümrüt ve Altın Temalı Tailwind Ayarları -->
+    <!-- Özel Premium Renk Paleti -->
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     fontFamily: { 
-                        serif: ['Playfair Display', 'serif'],
-                        sans: ['Outfit', 'sans-serif'], 
+                        sans: ['Inter', 'sans-serif'], 
+                        serif: ['Playfair Display', 'serif'] 
                     },
                     colors: { 
-                        zmr: { 900: '#022c22', 800: '#064e3b', 700: '#047857' },
-                        altin: { 400: '#fbbf24', 500: '#f59e0b', 600: '#d97706' }
+                        darkBg: '#080B12', /* Çok derin, premium lacivert/siyah */
+                        cardBg: '#111622', 
+                        gold: '#E5B869', /* Soft ve Asil Altın Rengi */
+                        goldLight: '#FCE7AD'
                     }
                 }
             }
@@ -53,175 +55,319 @@
     </script>
 
     <style>
-        .tooltip-text { visibility: hidden; opacity: 0; transition: opacity 0.3s ease, transform 0.3s ease; transform: translateY(10px); }
+        .tooltip-text { visibility: hidden; opacity: 0; transition: all 0.3s ease; transform: translateY(10px); }
         .group:hover .tooltip-text { visibility: visible; opacity: 1; transform: translateY(0); }
-        .glass-card { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(16px); border: 1px solid rgba(251, 191, 36, 0.15); }
+        /* Özel Kaydırma Çubuğu (Galeri İçin) */
+        .hide-scroll::-webkit-scrollbar { display: none; }
+        .hide-scroll { -ms-overflow-style: none; scrollbar-width: none; }
     </style>
 </head>
-<body class="bg-zmr-900 text-gray-100 font-sans antialiased selection:bg-altin-500 selection:text-zmr-900 relative overflow-x-hidden">
+<body class="bg-darkBg text-gray-200 font-sans antialiased selection:bg-gold selection:text-black relative">
 
-    <div class="fixed top-[-10%] left-[-10%] w-[60%] h-[60%] rounded-full bg-altin-600/10 blur-[150px] pointer-events-none -z-10"></div>
-    <div class="fixed bottom-[-10%] right-[-10%] w-[60%] h-[60%] rounded-full bg-zmr-700/20 blur-[150px] pointer-events-none -z-10"></div>
+    <!-- Ortam Işıkları (Premium Hissiyat) -->
+    <div class="fixed top-[-20%] left-[-10%] w-[50%] h-[50%] rounded-full bg-gold/5 blur-[150px] pointer-events-none -z-10"></div>
+    <div class="fixed bottom-[-20%] right-[-10%] w-[50%] h-[50%] rounded-full bg-blue-900/10 blur-[150px] pointer-events-none -z-10"></div>
 
     <!-- NAVBAR -->
-    <nav class="fixed w-full z-50 glass-card border-b-0 border-altin-500/20">
+    <nav class="fixed w-full z-50 bg-darkBg/80 backdrop-blur-xl border-b border-gray-800/60">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
-                
-                <!-- Logo ve Başlık -->
-                <div class="flex items-center gap-4 hover:scale-105 transition-transform duration-300">
-                    <img src="ckblogo.png" alt="Cuma Kandil Bayram Mesajları Logosu" class="h-12 w-auto object-contain drop-shadow-[0_0_10px_rgba(251,191,36,0.5)] rounded-xl">
-                    <span class="font-serif font-bold text-lg tracking-wide hidden sm:block text-white leading-tight">
-                        Cuma Kandil Bayram<br><span class="text-altin-400 text-sm">Mesajları</span>
-                    </span>
+                <!-- Logo -->
+                <div class="flex items-center gap-3">
+                    <img src="ckblogo.png" alt="Uygulama Logosu" class="h-10 lg:h-12 w-auto object-contain rounded-lg drop-shadow-[0_0_8px_rgba(229,184,105,0.3)]">
+                    <span class="font-bold text-lg lg:text-xl tracking-tight hidden sm:block text-white">İslami <span class="text-gold">Mesajlar</span></span>
                 </div>
                 
-                <!-- Masaüstü Dil Seçici -->
-                <div class="hidden md:flex items-center gap-2 bg-black/30 px-4 py-2 rounded-full border border-gray-700/50">
-                    <div class="group relative flex flex-col items-center cursor-pointer">
-                        <span class="fi fi-tr text-2xl rounded-full border-2 border-altin-400 shadow-[0_0_10px_rgba(251,191,36,0.6)]"></span>
-                        <span class="tooltip-text absolute top-10 bg-black text-altin-400 text-xs font-semibold px-3 py-1 rounded-lg border border-altin-500/30 whitespace-nowrap z-50">Türkçe</span>
+                <!-- Masaüstü Navigasyon -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#ozellikler" class="text-gray-400 hover:text-white transition font-medium">Özellikler</a>
+                    <a href="#kategoriler" class="text-gray-400 hover:text-white transition font-medium">Kategoriler</a>
+                    <a href="#galeri" class="text-gray-400 hover:text-white transition font-medium">Uygulama İçi</a>
+                    
+                    <!-- Çoklu Dil Seçici -->
+                    <div class="flex items-center gap-3 ml-4 pl-4 border-l border-gray-700 text-xl">
+                        <div class="group relative flex flex-col items-center cursor-pointer">
+                            <span class="fi fi-tr rounded-sm shadow-[0_0_8px_rgba(229,184,105,0.6)] border border-gold"></span>
+                            <span class="tooltip-text absolute top-8 bg-cardBg border border-gray-700 text-gold text-xs font-bold px-2 py-1 rounded shadow-lg whitespace-nowrap">Türkçe</span>
+                        </div>
+                        <a href="en.html" class="group relative flex flex-col items-center opacity-50 hover:opacity-100 transition"><span class="fi fi-gb rounded-sm"></span><span class="tooltip-text absolute top-8 bg-cardBg border border-gray-700 text-white text-xs px-2 py-1 rounded shadow-lg whitespace-nowrap">English</span></a>
+                        <a href="de.html" class="group relative flex flex-col items-center opacity-50 hover:opacity-100 transition"><span class="fi fi-de rounded-sm"></span><span class="tooltip-text absolute top-8 bg-cardBg border border-gray-700 text-white text-xs px-2 py-1 rounded shadow-lg whitespace-nowrap">Deutsch</span></a>
+                        <a href="fr.html" class="group relative flex flex-col items-center opacity-50 hover:opacity-100 transition"><span class="fi fi-fr rounded-sm"></span><span class="tooltip-text absolute top-8 bg-cardBg border border-gray-700 text-white text-xs px-2 py-1 rounded shadow-lg whitespace-nowrap">Français</span></a>
+                        <a href="ar.html" class="group relative flex flex-col items-center opacity-50 hover:opacity-100 transition"><span class="fi fi-sa rounded-sm"></span><span class="tooltip-text absolute top-8 bg-cardBg border border-gray-700 text-white text-xs px-2 py-1 rounded shadow-lg whitespace-nowrap">العربية</span></a>
+                        <a href="fa.html" class="group relative flex flex-col items-center opacity-50 hover:opacity-100 transition"><span class="fi fi-ir rounded-sm"></span><span class="tooltip-text absolute top-8 bg-cardBg border border-gray-700 text-white text-xs px-2 py-1 rounded shadow-lg whitespace-nowrap">فارسی</span></a>
+                        <a href="ur.html" class="group relative flex flex-col items-center opacity-50 hover:opacity-100 transition"><span class="fi fi-pk rounded-sm"></span><span class="tooltip-text absolute top-8 bg-cardBg border border-gray-700 text-white text-xs px-2 py-1 rounded shadow-lg whitespace-nowrap">اردو</span></a>
+                        <a href="hi.html" class="group relative flex flex-col items-center opacity-50 hover:opacity-100 transition"><span class="fi fi-in rounded-sm"></span><span class="tooltip-text absolute top-8 bg-cardBg border border-gray-700 text-white text-xs px-2 py-1 rounded shadow-lg whitespace-nowrap">हिन्दी</span></a>
+                        <a href="id.html" class="group relative flex flex-col items-center opacity-50 hover:opacity-100 transition"><span class="fi fi-id rounded-sm"></span><span class="tooltip-text absolute top-8 bg-cardBg border border-gray-700 text-white text-xs px-2 py-1 rounded shadow-lg whitespace-nowrap">Indonesia</span></a>
+                        <a href="ru.html" class="group relative flex flex-col items-center opacity-50 hover:opacity-100 transition"><span class="fi fi-ru rounded-sm"></span><span class="tooltip-text absolute top-8 bg-cardBg border border-gray-700 text-white text-xs px-2 py-1 rounded shadow-lg whitespace-nowrap">Русский</span></a>
                     </div>
-                    <div class="w-px h-6 bg-gray-700 mx-2"></div>
-                    <a href="en.html" class="group relative flex flex-col items-center hover:scale-110 transition-transform opacity-50 hover:opacity-100"><span class="fi fi-gb text-xl rounded-full"></span><span class="tooltip-text absolute top-10 bg-black text-white text-xs px-2 py-1 rounded-lg whitespace-nowrap z-50">English</span></a>
-                    <a href="de.html" class="group relative flex flex-col items-center hover:scale-110 transition-transform opacity-50 hover:opacity-100"><span class="fi fi-de text-xl rounded-full"></span><span class="tooltip-text absolute top-10 bg-black text-white text-xs px-2 py-1 rounded-lg whitespace-nowrap z-50">Deutsch</span></a>
-                    <a href="fr.html" class="group relative flex flex-col items-center hover:scale-110 transition-transform opacity-50 hover:opacity-100"><span class="fi fi-fr text-xl rounded-full"></span><span class="tooltip-text absolute top-10 bg-black text-white text-xs px-2 py-1 rounded-lg whitespace-nowrap z-50">Français</span></a>
-                    <a href="ar.html" class="group relative flex flex-col items-center hover:scale-110 transition-transform opacity-50 hover:opacity-100"><span class="fi fi-sa text-xl rounded-full"></span><span class="tooltip-text absolute top-10 bg-black text-white text-xs px-2 py-1 rounded-lg whitespace-nowrap z-50">العربية</span></a>
-                    <a href="fa.html" class="group relative flex flex-col items-center hover:scale-110 transition-transform opacity-50 hover:opacity-100"><span class="fi fi-ir text-xl rounded-full"></span><span class="tooltip-text absolute top-10 bg-black text-white text-xs px-2 py-1 rounded-lg whitespace-nowrap z-50">فارسی</span></a>
-                    <a href="ur.html" class="group relative flex flex-col items-center hover:scale-110 transition-transform opacity-50 hover:opacity-100"><span class="fi fi-pk text-xl rounded-full"></span><span class="tooltip-text absolute top-10 bg-black text-white text-xs px-2 py-1 rounded-lg whitespace-nowrap z-50">اردو</span></a>
-                    <a href="hi.html" class="group relative flex flex-col items-center hover:scale-110 transition-transform opacity-50 hover:opacity-100"><span class="fi fi-in text-xl rounded-full"></span><span class="tooltip-text absolute top-10 bg-black text-white text-xs px-2 py-1 rounded-lg whitespace-nowrap z-50">हिन्दी</span></a>
-                    <a href="id.html" class="group relative flex flex-col items-center hover:scale-110 transition-transform opacity-50 hover:opacity-100"><span class="fi fi-id text-xl rounded-full"></span><span class="tooltip-text absolute top-10 bg-black text-white text-xs px-2 py-1 rounded-lg whitespace-nowrap z-50">Bahasa Indonesia</span></a>
-                    <a href="ru.html" class="group relative flex flex-col items-center hover:scale-110 transition-transform opacity-50 hover:opacity-100"><span class="fi fi-ru text-xl rounded-full"></span><span class="tooltip-text absolute top-10 bg-black text-white text-xs px-2 py-1 rounded-lg whitespace-nowrap z-50">Русский</span></a>
                 </div>
 
-                <!-- Mobil Menü Butonu -->
-                <button id="mobile-menu-btn" class="md:hidden text-altin-400 text-2xl focus:outline-none">
-                    <i class="fa-solid fa-bars-staggered"></i>
-                </button>
+                <div class="flex items-center gap-3">
+                    <button id="mobile-menu-button" class="md:hidden text-gray-300 hover:text-white focus:outline-none text-2xl">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
             </div>
         </div>
 
-        <!-- Mobil Dil Çekmecesi -->
-        <div id="mobile-menu" class="hidden md:hidden glass-card border-t border-altin-500/20 absolute w-full left-0 top-20 shadow-2xl">
-            <div class="p-6 grid grid-cols-5 gap-6 justify-items-center">
-                <div class="flex flex-col items-center gap-1"><span class="fi fi-tr text-3xl rounded-full border-2 border-altin-400"></span><span class="text-[10px] text-altin-400">TR</span></div>
-                <a href="en.html" class="flex flex-col items-center gap-1 opacity-50"><span class="fi fi-gb text-3xl rounded-full"></span><span class="text-[10px]">EN</span></a>
-                <a href="de.html" class="flex flex-col items-center gap-1 opacity-50"><span class="fi fi-de text-3xl rounded-full"></span><span class="text-[10px]">DE</span></a>
-                <a href="fr.html" class="flex flex-col items-center gap-1 opacity-50"><span class="fi fi-fr text-3xl rounded-full"></span><span class="text-[10px]">FR</span></a>
-                <a href="ar.html" class="flex flex-col items-center gap-1 opacity-50"><span class="fi fi-sa text-3xl rounded-full"></span><span class="text-[10px]">AR</span></a>
-                <a href="fa.html" class="flex flex-col items-center gap-1 opacity-50"><span class="fi fi-ir text-3xl rounded-full"></span><span class="text-[10px]">FA</span></a>
-                <a href="ur.html" class="flex flex-col items-center gap-1 opacity-50"><span class="fi fi-pk text-3xl rounded-full"></span><span class="text-[10px]">UR</span></a>
-                <a href="hi.html" class="flex flex-col items-center gap-1 opacity-50"><span class="fi fi-in text-3xl rounded-full"></span><span class="text-[10px]">HI</span></a>
-                <a href="id.html" class="flex flex-col items-center gap-1 opacity-50"><span class="fi fi-id text-3xl rounded-full"></span><span class="text-[10px]">ID</span></a>
-                <a href="ru.html" class="flex flex-col items-center gap-1 opacity-50"><span class="fi fi-ru text-3xl rounded-full"></span><span class="text-[10px]">RU</span></a>
+        <!-- Mobil Menü -->
+        <div id="mobile-menu" class="hidden md:hidden bg-cardBg/95 backdrop-blur-xl border-b border-gray-800 shadow-2xl absolute w-full left-0 top-20 transition-all">
+            <div class="px-4 pt-4 pb-6 flex flex-col space-y-4 text-center">
+                <a href="#ozellikler" class="text-gray-300 hover:text-white font-medium text-lg">Özellikler</a>
+                <a href="#kategoriler" class="text-gray-300 hover:text-white font-medium text-lg">Kategoriler</a>
+                <a href="#galeri" class="text-gray-300 hover:text-white font-medium text-lg">Ekranlar</a>
+                
+                <div class="pt-4 mt-2 border-t border-gray-700 grid grid-cols-5 gap-4 justify-items-center text-2xl">
+                    <span class="fi fi-tr rounded-sm border border-gold opacity-100"></span>
+                    <a href="en.html" class="fi fi-gb rounded-sm opacity-50"></a>
+                    <a href="de.html" class="fi fi-de rounded-sm opacity-50"></a>
+                    <a href="fr.html" class="fi fi-fr rounded-sm opacity-50"></a>
+                    <a href="ar.html" class="fi fi-sa rounded-sm opacity-50"></a>
+                    <a href="fa.html" class="fi fi-ir rounded-sm opacity-50"></a>
+                    <a href="ur.html" class="fi fi-pk rounded-sm opacity-50"></a>
+                    <a href="hi.html" class="fi fi-in rounded-sm opacity-50"></a>
+                    <a href="id.html" class="fi fi-id rounded-sm opacity-50"></a>
+                    <a href="ru.html" class="fi fi-ru rounded-sm opacity-50"></a>
+                </div>
             </div>
         </div>
     </nav>
 
-    <!-- HERO BÖLÜMÜ -->
-    <header class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 px-4 flex flex-col items-center text-center">
-        <span class="text-altin-400 font-medium tracking-widest uppercase text-sm mb-4">CUMA KANDİL BAYRAM MESAJLARI</span>
-        <h1 class="font-serif text-5xl lg:text-7xl font-bold mb-6 text-white leading-tight max-w-4xl">
-            Duygularınızı <br>
-            <span class="text-transparent bg-clip-text bg-gradient-to-r from-altin-400 to-yellow-100">En Şık Şekilde</span> İfade Edin.
-        </h1>
-        <p class="text-lg lg:text-xl text-gray-300 max-w-2xl mb-12 font-light leading-relaxed">
-            Sadece Cuma günleri değil; tüm Kandiller, Bayramlar ve özel günlerde en güzel tebrik kartlarını sevdiklerinize gönderin. Hazır resimleri kullanın veya kendi kartınızı baştan yaratın!
-        </p>
-        
-        <a href="https://play.google.com/store/apps/details?id=com.atix.cumakandilbayram" target="_blank" class="hover:scale-105 transition-transform duration-300 hover:drop-shadow-[0_10px_30px_rgba(251,191,36,0.3)]">
-            <img src="Google_Play.png" alt="Google Play'den İndir" class="h-16 lg:h-20 w-auto">
-        </a>
-    </header>
-
-    <!-- BENTO GRID (Özellikler & Ekran Görüntüleri) -->
-    <section class="py-20 px-4 max-w-7xl mx-auto">
-        <div class="text-center mb-16">
-            <h2 class="font-serif text-4xl lg:text-5xl font-bold text-white mb-4">Tek Bir Uygulama, <span class="text-altin-400">Binlerce Mesaj</span></h2>
-            <p class="text-gray-400 text-lg">Tasarımlarınızı yüksek çözünürlüklü arka planlar ve asil fontlarla kişiselleştirin.</p>
-        </div>
-
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 lg:gap-6">
+    <!-- HERO BÖLÜMÜ (SEO Dostu Zengin Metin) -->
+    <section class="pt-32 pb-20 lg:pt-48 lg:pb-32 px-4 overflow-hidden relative border-b border-gray-800/50">
+        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+            <div class="flex-1 text-center lg:text-left z-10">
+                <div class="inline-flex items-center px-4 py-2 rounded-full border border-gold/30 bg-gold/5 text-goldLight text-sm font-semibold mb-6 shadow-[0_0_15px_rgba(229,184,105,0.1)]">
+                    <i class="fa-solid fa-star text-gold mr-2"></i>
+                    Yeni: Hazır Resim Galerisi Eklendi!
+                </div>
+                
+                <h1 class="text-5xl lg:text-6xl font-black tracking-tight mb-6 leading-[1.1] text-white">
+                    Duygularınızı <br>
+                    <span class="font-serif italic font-normal text-transparent bg-clip-text bg-gradient-to-r from-gold to-yellow-200">En Şık Şekilde</span> İfade Edin.
+                </h1>
+                
+                <p class="text-lg text-gray-400 mb-10 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                    Sadece cuma günleri değil; tüm kandiller, dini bayramlar, milli bayramlar ve özel günlerde en güzel tebrik kartlarını sevdiklerinize gönderin. İster binlerce <strong class="text-gray-200">hazır resimli mesajı</strong> kullanın, isterseniz kendi tebrik kartınızı baştan yaratın!
+                </p>
+                
+                <div class="flex flex-col items-center lg:items-start gap-5">
+                    <div class="flex flex-col sm:flex-row items-center gap-4">
+                        <a href="https://play.google.com/store/apps/details?id=com.atix.cumakandilbayram" target="_blank" rel="noopener noreferrer" class="inline-block transform hover:-translate-y-1 transition duration-300 hover:drop-shadow-[0_0_20px_rgba(229,184,105,0.3)]">
+                            <img src="Google_Play.png" alt="Google Play'den İndir" class="h-14 lg:h-16 w-auto object-contain">
+                        </a>
+                        <a href="#ozellikler" class="px-8 py-4 rounded-xl font-bold text-lg text-white border border-gray-700 hover:bg-gray-800 transition flex items-center justify-center">
+                            Özellikleri Keşfet
+                        </a>
+                    </div>
+                    
+                    <div class="flex items-center gap-3 text-sm mt-2">
+                        <div class="flex text-gold text-sm drop-shadow-md">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <span class="text-gray-400 font-medium tracking-wide">Tamamen Ücretsiz & Güncel İçerik</span>
+                    </div>
+                </div>
+            </div>
             
-            <!-- Kendi Kartını Tasarla -->
-            <div class="col-span-2 md:col-span-2 row-span-2 glass-card rounded-[2rem] p-6 lg:p-10 flex flex-col items-center justify-between group overflow-hidden relative">
-                <div class="absolute inset-0 bg-gradient-to-t from-zmr-900/90 to-transparent z-10"></div>
-                <div class="relative z-20 text-center mb-8">
-                    <h3 class="font-serif text-3xl font-bold text-altin-400 mb-2">Kendi Kartını Tasarla</h3>
-                    <p class="text-sm text-gray-300">Yazı tipini, rengi, gölgeleri ayarlayın. Altına kendi imzanızı atın.</p>
+            <div class="flex-1 relative w-full max-w-[18rem] sm:max-w-[22rem] lg:max-w-sm mx-auto flex items-center justify-center">
+                <div class="absolute inset-0 bg-gold/20 blur-[100px] rounded-full z-0 pointer-events-none"></div>
+                <img src="tr01.png" alt="Kart Tasarım Ekranı" class="relative z-10 w-full h-auto rounded-[2.5rem] shadow-[0_20px_50px_rgba(0,0,0,0.8)] border border-gray-700/80 transform -rotate-2 hover:rotate-0 transition duration-500">
+            </div>
+        </div>
+    </section>
+
+    <!-- ÖZELLİKLER (SEO İçin Mükemmel Alan) -->
+    <section id="ozellikler" class="py-24 bg-cardBg border-t border-gray-800/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-5xl font-black mb-4 tracking-tight text-white">Öne Çıkan Harika Özellikler</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto text-lg">Sevdiklerinize göndereceğiniz mesajlar artık sıradan olmayacak. Duygularınızı yansıtacak profesyonel araçlarla tanışın.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Özellik 1 -->
+                <div class="bg-gradient-to-b from-gray-900 to-darkBg p-8 rounded-[2rem] border border-gray-800/80 hover:border-gold/30 transition-all duration-300 group">
+                    <div class="w-14 h-14 bg-gold/10 rounded-2xl flex items-center justify-center text-gold text-2xl mb-6 group-hover:scale-110 transition-transform shadow-[0_0_15px_rgba(229,184,105,0.1)]">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Kendi Kartını Tasarla</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Seçtiğiniz yazılı mesaja en uygun arka planı ekleyerek kendi özel resimli tebrik kartınızı oluşturun. Onlarca asil renk, zengin yazı fontu ve kartın köşesine kendi imzanızı ekleme özelliğiyle tamamen kişiselleştirin.
+                    </p>
                 </div>
-                <div class="flex gap-4 relative z-0 mt-auto transform group-hover:-translate-y-4 transition duration-500">
-                    <img src="tr01.png" class="w-1/2 rounded-2xl shadow-2xl border border-gray-700/50 object-cover" alt="Tasarım Aracı">
-                    <img src="tr02.png" class="w-1/2 rounded-2xl shadow-2xl border border-gray-700/50 object-cover mt-8" alt="Tasarım Ayarları">
+                <!-- Özellik 2 -->
+                <div class="bg-gradient-to-b from-gray-900 to-darkBg p-8 rounded-[2rem] border border-gray-800/80 hover:border-gold/30 transition-all duration-300 group">
+                    <div class="w-14 h-14 bg-blue-500/10 rounded-2xl flex items-center justify-center text-blue-400 text-2xl mb-6 group-hover:scale-110 transition-transform shadow-[0_0_15px_rgba(59,130,246,0.1)]">
+                        <i class="fa-solid fa-images"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Zengin Resim Galerisi</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Yüzlerce yüksek çözünürlüklü, özenle tasarlanmış hazır resimli Cuma, Kandil, Günaydın ve İyi Geceler mesajları parmaklarınızın ucunda. Tek tıkla galeriden seçin ve anında paylaşın.
+                    </p>
+                </div>
+                <!-- Özellik 3 -->
+                <div class="bg-gradient-to-b from-gray-900 to-darkBg p-8 rounded-[2rem] border border-gray-800/80 hover:border-gold/30 transition-all duration-300 group">
+                    <div class="w-14 h-14 bg-green-500/10 rounded-2xl flex items-center justify-center text-green-400 text-2xl mb-6 group-hover:scale-110 transition-transform shadow-[0_0_15px_rgba(34,197,94,0.1)]">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Tek Tuşla Durum & Hikaye</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Beğendiğiniz resimli mesajları doğrudan telefonunuza indirin veya hiçbir kalite kaybı yaşamadan WhatsApp durum (Status), Instagram hikaye (Story) veya Facebook üzerinden anında sevdiklerinize iletin.
+                    </p>
+                </div>
+                <!-- Özellik 4 -->
+                <div class="bg-gradient-to-b from-gray-900 to-darkBg p-8 rounded-[2rem] border border-gray-800/80 hover:border-gold/30 transition-all duration-300 group">
+                    <div class="w-14 h-14 bg-purple-500/10 rounded-2xl flex items-center justify-center text-purple-400 text-2xl mb-6 group-hover:scale-110 transition-transform shadow-[0_0_15px_rgba(168,85,247,0.1)]">
+                        <i class="fa-solid fa-globe"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Çoklu Dil Desteği</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Türkçe, İngilizce, Arapça, Urduca, Fransızca, Rusça, Hintçe, Farsça ve Endonezce olmak üzere toplam 10 farklı dil seçeneği ile dünyanın dört bir yanındaki sevdiklerinize ulaşıp tebrikleşin.
+                    </p>
+                </div>
+                <!-- Özellik 5 -->
+                <div class="bg-gradient-to-b from-gray-900 to-darkBg p-8 rounded-[2rem] border border-gray-800/80 hover:border-gold/30 transition-all duration-300 group">
+                    <div class="w-14 h-14 bg-red-500/10 rounded-2xl flex items-center justify-center text-red-400 text-2xl mb-6 group-hover:scale-110 transition-transform shadow-[0_0_15px_rgba(239,68,68,0.1)]">
+                        <i class="fa-regular fa-calendar-check"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Önemli Günler Takvimi</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Yaklaşan tüm dini günleri, kandilleri ve bayramları tek bir ekrandan kolayca takip edin. Hatırlatıcı bildirimler sayesinde sevdiklerinizin hiçbir özel gününü kaçırmayın.
+                    </p>
+                </div>
+                <!-- Özellik 6 -->
+                <div class="bg-gradient-to-b from-gray-900 to-darkBg p-8 rounded-[2rem] border border-gray-800/80 hover:border-gold/30 transition-all duration-300 group">
+                    <div class="w-14 h-14 bg-yellow-500/10 rounded-2xl flex items-center justify-center text-yellow-400 text-2xl mb-6 group-hover:scale-110 transition-transform shadow-[0_0_15px_rgba(234,179,8,0.1)]">
+                        <i class="fa-solid fa-book-open"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Günün Hikmeti & Dualar</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Her güne özel olarak seçilmiş, ruhunuzu dinlendirecek özlü sözler, anlamlı hadisler ve dualar. Motivasyonunuzu artıracak içeriklerle güne huzurlu ve pozitif başlayın.
+                    </p>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- Arka Planlar -->
-            <div class="col-span-2 md:col-span-1 glass-card rounded-[2rem] p-5 flex flex-col items-center group">
-                <h4 class="font-serif text-xl font-bold text-white mb-4">Premium Arka Planlar</h4>
-                <img src="tr03.png" class="w-3/4 rounded-2xl shadow-lg transform group-hover:scale-105 transition duration-500" alt="Arka Planlar">
-            </div>
-
-            <!-- Geniş Kategoriler -->
-            <div class="col-span-2 md:col-span-1 glass-card rounded-[2rem] p-5 flex flex-col items-center group">
-                <h4 class="font-serif text-xl font-bold text-white mb-4">Geniş Kategoriler</h4>
-                <img src="tr04.png" class="w-3/4 rounded-2xl shadow-lg transform group-hover:scale-105 transition duration-500" alt="Ana Menü">
-            </div>
-
-            <!-- Cuma Mesajları -->
-            <div class="col-span-2 md:col-span-1 row-span-2 glass-card rounded-[2rem] p-5 flex flex-col items-center justify-center group bg-gradient-to-b from-zmr-800/30 to-transparent">
-                <h4 class="font-serif text-xl font-bold text-altin-400 mb-4 text-center">Hazır Mesajlar</h4>
-                <img src="tr05.png" class="w-4/5 rounded-2xl shadow-lg transform group-hover:scale-105 transition duration-500" alt="Cuma Mesajları">
-            </div>
-
-            <!-- Mübarek Sözler -->
-            <div class="col-span-1 md:col-span-1 glass-card rounded-[2rem] p-4 flex flex-col justify-center items-center">
-                <img src="tr06.png" class="w-full rounded-xl shadow-lg opacity-90 hover:opacity-100 transition" alt="Dualar">
-                <span class="mt-3 text-sm text-gray-400 font-medium">Dualar & Sözler</span>
-            </div>
-
-            <!-- Bayramlar -->
-            <div class="col-span-1 md:col-span-1 glass-card rounded-[2rem] p-4 flex flex-col justify-center items-center">
-                <img src="tr07.png" class="w-full rounded-xl shadow-lg opacity-90 hover:opacity-100 transition" alt="Bayramlar">
-                <span class="mt-3 text-sm text-gray-400 font-medium">Dini Bayramlar</span>
-            </div>
-
-            <!-- Kandiller -->
-            <div class="col-span-2 md:col-span-2 glass-card rounded-[2rem] p-6 flex flex-col sm:flex-row items-center gap-6 group">
-                <div class="flex-1 text-center sm:text-left">
-                    <h4 class="font-serif text-2xl font-bold text-white mb-2">Mübarek Kandiller</h4>
-                    <p class="text-sm text-gray-400">Regaip, Miraç, Berat ve Kadir Gecesi'ne özel huzur dolu tebrikler.</p>
+    <!-- KATEGORİLER BÖLÜMÜ (SEO Metinleri) -->
+    <section id="kategoriler" class="py-24 bg-darkBg border-t border-gray-800/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row gap-16">
+            <div class="flex-1">
+                <h2 class="text-3xl lg:text-5xl font-black mb-8 tracking-tight text-white">Kapsamlı İçerik ve Dini Günler</h2>
+                <div class="space-y-6">
+                    <div class="bg-cardBg p-6 rounded-2xl border border-gray-800/80 hover:border-gold/30 transition flex items-start group">
+                        <div class="mt-1 w-10 h-10 bg-gold/10 rounded-xl flex items-center justify-center text-gold text-lg shrink-0 group-hover:bg-gold group-hover:text-black transition-colors"><i class="fa-solid fa-mosque"></i></div>
+                        <div class="ml-4">
+                            <h4 class="font-bold text-lg text-white">Cuma ve Kandil Mesajları</h4>
+                            <p class="text-gray-400 text-sm mt-2 leading-relaxed">Ayetli, dualı, hadisli en yeni Cuma mesajları. Mevlid, Regaip, Miraç, Berat Kandili ve Kadir Gecesi için özel tasarlanmış huzur dolu tebrik kartları.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-cardBg p-6 rounded-2xl border border-gray-800/80 hover:border-gold/30 transition flex items-start group">
+                        <div class="mt-1 w-10 h-10 bg-gold/10 rounded-xl flex items-center justify-center text-gold text-lg shrink-0 group-hover:bg-gold group-hover:text-black transition-colors"><i class="fa-solid fa-moon"></i></div>
+                        <div class="ml-4">
+                            <h4 class="font-bold text-lg text-white">Dini Bayramlar ve Mübarek Günler</h4>
+                            <p class="text-gray-400 text-sm mt-2 leading-relaxed">Ramazan ve Kurban Bayramı coşkusunu Arefe gününden itibaren paylaşın. Üç Aylar, Aşure Günü ve Hicri Yılbaşı gibi mübarek günler için özel resimler.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-cardBg p-6 rounded-2xl border border-gray-800/80 hover:border-gold/30 transition flex items-start group">
+                        <div class="mt-1 w-10 h-10 bg-gold/10 rounded-xl flex items-center justify-center text-gold text-lg shrink-0 group-hover:bg-gold group-hover:text-black transition-colors"><i class="fa-solid fa-flag"></i></div>
+                        <div class="ml-4">
+                            <h4 class="font-bold text-lg text-white">Milli Bayramlar & Günlük Mesajlar</h4>
+                            <p class="text-gray-400 text-sm mt-2 leading-relaxed">Günaydın, İyi geceler, Anneler/Babalar günü gibi günlük tebriklerin yanı sıra; 29 Ekim, 30 Ağustos, 19 Mayıs ve 23 Nisan gibi milli değerlerimiz için hazır mesajlar.</p>
+                        </div>
+                    </div>
                 </div>
-                <img src="tr08.png" class="w-1/2 sm:w-1/3 rounded-2xl shadow-lg transform group-hover:rotate-2 transition duration-500" alt="Kandiller">
+            </div>
+            
+            <div class="flex-1 w-full bg-cardBg rounded-[2rem] p-8 border border-gray-800 shadow-[0_20px_50px_rgba(0,0,0,0.5)] relative overflow-hidden flex flex-col justify-center">
+                <div class="absolute top-0 right-0 w-32 h-32 bg-gold/10 rounded-full blur-3xl"></div>
+                <i class="fa-solid fa-quote-left text-4xl text-gray-700 mb-6"></i>
+                <p class="font-serif text-2xl lg:text-3xl text-gray-200 leading-snug mb-8 relative z-10 italic">
+                    "Allah hikmetiyle bir kapıyı kapatırsa rahmetiyle diğerini açar. Ya Rabbi bu mübarek gün hürmetine bizlere hayırlı kapılar aç."
+                </p>
+                <div class="border-l-4 border-gold pl-4 relative z-10">
+                    <p class="text-white font-bold text-lg">Tüm İslam Aleminin Cuması, Kandili ve Bayramı Mübarek Olsun.</p>
+                    <p class="text-gray-400 text-sm mt-1">En güzel dileklerinizi sevdiklerinize hemen ulaştırın.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALERİ (Dikey Ekran Görüntüleri İçin Kusursuz Düzen) -->
+    <section id="galeri" class="py-24 bg-cardBg/50 border-t border-gray-800/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl lg:text-5xl font-black mb-4 tracking-tight text-white">Uygulama İçi Görünümler</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto text-lg">Sade, modern ve kullanıcı dostu arayüzü ile aradığınızı anında bulun.</p>
             </div>
 
+            <!-- Yatay Kaydırılabilir Galeri Alanı (Mobilde kaydırılır, masaüstünde grid) -->
+            <div class="flex overflow-x-auto gap-6 pb-8 hide-scroll snap-x snap-mandatory lg:grid lg:grid-cols-4 lg:overflow-visible">
+                
+                <div class="shrink-0 w-64 lg:w-full snap-center flex flex-col items-center">
+                    <img src="tr01.png" alt="Kart Tasarım Ekranı" class="w-full rounded-[2rem] border border-gray-700/80 shadow-lg object-contain">
+                    <h4 class="mt-4 font-bold text-white text-center">Görsel Tasarım Aracı</h4>
+                </div>
+                <div class="shrink-0 w-64 lg:w-full snap-center flex flex-col items-center">
+                    <img src="tr02.png" alt="Arka Plan Seçimi" class="w-full rounded-[2rem] border border-gray-700/80 shadow-lg object-contain">
+                    <h4 class="mt-4 font-bold text-white text-center">Detaylı Yazı Ayarları</h4>
+                </div>
+                <div class="shrink-0 w-64 lg:w-full snap-center flex flex-col items-center">
+                    <img src="tr03.png" alt="Premium Arka Planlar" class="w-full rounded-[2rem] border border-gray-700/80 shadow-lg object-contain">
+                    <h4 class="mt-4 font-bold text-white text-center">Yüzlerce Arka Plan</h4>
+                </div>
+                <div class="shrink-0 w-64 lg:w-full snap-center flex flex-col items-center">
+                    <img src="tr04.png" alt="Ana Kategori Menüsü" class="w-full rounded-[2rem] border border-gray-700/80 shadow-lg object-contain">
+                    <h4 class="mt-4 font-bold text-white text-center">Kullanışlı Ana Menü</h4>
+                </div>
+                <div class="shrink-0 w-64 lg:w-full snap-center flex flex-col items-center">
+                    <img src="tr05.png" alt="Cuma Mesajları" class="w-full rounded-[2rem] border border-gray-700/80 shadow-lg object-contain">
+                    <h4 class="mt-4 font-bold text-white text-center">Hazır Cuma Mesajları</h4>
+                </div>
+                <div class="shrink-0 w-64 lg:w-full snap-center flex flex-col items-center">
+                    <img src="tr06.png" alt="Mübarek Sözler ve Dualar" class="w-full rounded-[2rem] border border-gray-700/80 shadow-lg object-contain">
+                    <h4 class="mt-4 font-bold text-white text-center">Dualar & Anlamlı Sözler</h4>
+                </div>
+                <div class="shrink-0 w-64 lg:w-full snap-center flex flex-col items-center">
+                    <img src="tr07.png" alt="Dini Bayramlar" class="w-full rounded-[2rem] border border-gray-700/80 shadow-lg object-contain">
+                    <h4 class="mt-4 font-bold text-white text-center">Bayram Mesajları</h4>
+                </div>
+                <div class="shrink-0 w-64 lg:w-full snap-center flex flex-col items-center">
+                    <img src="tr08.png" alt="Kandil Mesajları" class="w-full rounded-[2rem] border border-gray-700/80 shadow-lg object-contain">
+                    <h4 class="mt-4 font-bold text-white text-center">Kandil Tebrikleri</h4>
+                </div>
+
+            </div>
         </div>
     </section>
 
     <!-- FOOTER -->
-    <footer class="mt-20 border-t border-altin-500/20 glass-card">
-        <div class="max-w-7xl mx-auto px-4 py-12 flex flex-col items-center text-center">
-            <h2 class="font-serif text-3xl font-bold text-white mb-6">Hemen İndirin, Sevginizi Paylaşın!</h2>
-            <a href="https://play.google.com/store/apps/details?id=com.atix.cumakandilbayram" target="_blank" class="mb-10 hover:scale-105 transition-transform">
-                <img src="Google_Play.png" alt="Google Play" class="h-16 w-auto">
-            </a>
-            
-            <div class="flex gap-6 text-sm text-gray-400 font-medium">
-                <a href="privacy-policy.html" class="hover:text-altin-400 transition">Gizlilik Politikası (Privacy Policy)</a>
-            </div>
-            <p class="mt-6 text-xs text-gray-600">
-                &copy; 2026 Cuma Kandil Bayram Mesajları. Tüm hakları saklıdır.
+    <footer class="bg-black py-16 border-t border-gray-900 relative">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-black mb-4 text-white">Hemen İndirin, Sevginizi Paylaşın!</h2>
+            <p class="text-gray-400 mb-8 leading-relaxed text-base">
+                Cuma Kandil Bayram Mesajları uygulaması tamamen ücretsizdir. Kendi kartınızı oluşturun, duygularınızı en asil şekilde ifade edin.
             </p>
+            
+            <a href="https://play.google.com/store/apps/details?id=com.atix.cumakandilbayram" target="_blank" rel="noopener noreferrer" class="inline-block transform hover:-translate-y-1 transition duration-300 hover:drop-shadow-[0_0_25px_rgba(229,184,105,0.4)] mb-10">
+                <img src="Google_Play.png" alt="Google Play'den İndirin" class="h-16 lg:h-20 w-auto object-contain">
+            </a>
+
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 text-sm text-gray-500 border-t border-gray-900 pt-8">
+                <a href="https://docs.google.com/document/d/1se12jpj3VZfuHtXRXwn6x3jt23NGt8h0-v9zR--hKxM/edit?usp=sharing" target="_blank" rel="noopener noreferrer" class="hover:text-gold transition">Gizlilik Politikası (Privacy Policy)</a>
+                <span>&copy; 2026 Cuma Kandil Bayram Mesajları. Tüm Hakları Saklıdır.</span>
+            </div>
         </div>
     </footer>
 
-    <!-- Mobil Menü JavaScript -->
+    <!-- Mobil Menü Fonksiyonu -->
     <script>
-        const btn = document.getElementById('mobile-menu-btn');
+        const btn = document.getElementById('mobile-menu-button');
         const menu = document.getElementById('mobile-menu');
-        btn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-        });
+        btn.addEventListener('click', () => { menu.classList.toggle('hidden'); });
     </script>
 </body>
 </html>
