@@ -69,6 +69,59 @@
         .glass-card { background: rgba(6, 78, 59, 0.4); backdrop-filter: blur(20px); border: 1px solid rgba(217, 119, 6, 0.2); box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3); }
         .hide-scroll::-webkit-scrollbar { display: none; }
         .hide-scroll { -ms-overflow-style: none; scrollbar-width: none; }
+
+        /* KUSURSUZ CSS TELEFON MOCKUP'I */
+        .css-mockup {
+            position: relative;
+            background-color: #000;
+            /* Parlak Metalik Kasa Rengi */
+            border: 10px solid #1f2937; 
+            /* iPhone Kavisleri */
+            border-radius: 2.5rem; 
+            overflow: hidden;
+            /* 3 Boyutlu Gölge ve İç Çerçeve */
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8), inset 0 0 0 2px #4b5563;
+            /* Modern Telefon Ekran Oranı */
+            aspect-ratio: 9/19.5; 
+            z-index: 10;
+        }
+
+        /* Telefon Çentiği (Notch) */
+        .css-mockup::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 45%;
+            height: 25px;
+            background-color: #1f2937;
+            border-bottom-left-radius: 1rem;
+            border-bottom-right-radius: 1rem;
+            z-index: 20;
+        }
+
+        /* Çentik İçindeki Kamera Merceği */
+        .css-mockup::after {
+            content: '';
+            position: absolute;
+            top: 6px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 10px;
+            height: 10px;
+            background-color: #0a0a0a;
+            border-radius: 50%;
+            box-shadow: inset 0 -1px 2px rgba(255,255,255,0.2);
+            z-index: 30;
+        }
+
+        .css-mockup img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
     </style>
 </head>
 <body class="bg-deepGreen text-gray-200 font-sans antialiased selection:bg-gold selection:text-white relative overflow-x-hidden">
@@ -175,19 +228,13 @@
                 </div>
             </div>
             
-            <!-- GERÇEK MOCKUP İLE VİTRİN EKRANI -->
-            <div class="flex-1 relative w-full max-w-[18rem] sm:max-w-[20rem] lg:max-w-[22rem] mx-auto flex items-center justify-center animate-float z-20">
+            <!-- KUSURSUZ CSS MOCKUP -->
+            <div class="flex-1 relative w-full max-w-[16rem] sm:max-w-[20rem] lg:max-w-[22rem] mx-auto flex items-center justify-center animate-float z-20">
                 <div class="absolute inset-0 bg-gold/20 blur-[100px] rounded-full z-0 pointer-events-none"></div>
                 
-                <!-- Mockup Konteyneri -->
-                <div class="relative w-full">
-                    <!-- Telefon Çerçevesi (En üstte, cam gibi durur) -->
-                    <img src="mockup.png" alt="Phone Frame" class="relative z-20 w-full h-auto drop-shadow-2xl pointer-events-none">
-                    
-                    <!-- Uygulama Ekranı (Telefonun içine oturur. Eğer çerçevene tam uymazsa aşağıdaki top/bottom/left/right % değerlerini ufak ufak değiştirebilirsin) -->
-                    <div class="absolute top-[2.5%] bottom-[2.5%] left-[5.5%] right-[5.5%] z-10 overflow-hidden rounded-[2rem] bg-black">
-                        <img src="tr01.png" alt="Kart Tasarım Ekranı" class="w-full h-full object-cover">
-                    </div>
+                <!-- Sadece bu div ve içindeki resim yetiyor -->
+                <div class="css-mockup w-full">
+                    <img src="tr01.png" alt="Kart Tasarım Ekranı">
                 </div>
             </div>
 
@@ -309,7 +356,7 @@
         </div>
     </section>
 
-    <!-- GALERİ (GERÇEK MOCKUP İLE) -->
+    <!-- GALERİ -->
     <section id="galeri" class="py-24 glass-card border-t border-emerald-900/50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
@@ -317,93 +364,61 @@
                 <p class="text-emerald-200/70 max-w-2xl mx-auto text-lg font-light">Sade, asil ve kullanıcı dostu arayüzü ile aradığınızı anında bulun.</p>
             </div>
 
-            <!-- Yatay Kaydırılabilir Mockuplı Galeri -->
+            <!-- KUSURSUZ MOCKUPLI GALERİ -->
             <div class="flex overflow-x-auto gap-6 pb-10 hide-scroll snap-x snap-mandatory lg:grid lg:grid-cols-4 lg:gap-8 lg:overflow-visible">
                 
-                <!-- Mockup 1 -->
                 <div class="shrink-0 w-60 lg:w-full snap-center flex flex-col items-center group cursor-pointer">
-                    <div class="relative w-full group-hover:-translate-y-2 transition-transform duration-500">
-                        <img src="mockup.png" alt="Phone Frame" class="relative z-20 w-full h-auto drop-shadow-[0_15px_30px_rgba(0,0,0,0.6)] pointer-events-none">
-                        <div class="absolute top-[2.5%] bottom-[2.5%] left-[5.5%] right-[5.5%] z-10 overflow-hidden rounded-[1.5rem] sm:rounded-[2rem] bg-black">
-                            <img src="tr01.png" alt="Tasarım Aracı" class="w-full h-full object-cover">
-                        </div>
+                    <div class="css-mockup w-full group-hover:-translate-y-2 transition-transform duration-500">
+                        <img src="tr01.png" alt="Tasarım Aracı">
                     </div>
                     <h4 class="mt-6 font-serif font-bold text-lightGold text-lg">Görsel Tasarım Aracı</h4>
                 </div>
 
-                <!-- Mockup 2 -->
                 <div class="shrink-0 w-60 lg:w-full snap-center flex flex-col items-center group cursor-pointer">
-                    <div class="relative w-full group-hover:-translate-y-2 transition-transform duration-500">
-                        <img src="mockup.png" alt="Phone Frame" class="relative z-20 w-full h-auto drop-shadow-[0_15px_30px_rgba(0,0,0,0.6)] pointer-events-none">
-                        <div class="absolute top-[2.5%] bottom-[2.5%] left-[5.5%] right-[5.5%] z-10 overflow-hidden rounded-[1.5rem] sm:rounded-[2rem] bg-black">
-                            <img src="tr02.png" alt="Yazı Ayarları" class="w-full h-full object-cover">
-                        </div>
+                    <div class="css-mockup w-full group-hover:-translate-y-2 transition-transform duration-500">
+                        <img src="tr02.png" alt="Yazı Ayarları">
                     </div>
                     <h4 class="mt-6 font-serif font-bold text-lightGold text-lg">Detaylı Yazı Ayarları</h4>
                 </div>
 
-                <!-- Mockup 3 -->
                 <div class="shrink-0 w-60 lg:w-full snap-center flex flex-col items-center group cursor-pointer">
-                    <div class="relative w-full group-hover:-translate-y-2 transition-transform duration-500">
-                        <img src="mockup.png" alt="Phone Frame" class="relative z-20 w-full h-auto drop-shadow-[0_15px_30px_rgba(0,0,0,0.6)] pointer-events-none">
-                        <div class="absolute top-[2.5%] bottom-[2.5%] left-[5.5%] right-[5.5%] z-10 overflow-hidden rounded-[1.5rem] sm:rounded-[2rem] bg-black">
-                            <img src="tr03.png" alt="Arka Planlar" class="w-full h-full object-cover">
-                        </div>
+                    <div class="css-mockup w-full group-hover:-translate-y-2 transition-transform duration-500">
+                        <img src="tr03.png" alt="Arka Planlar">
                     </div>
                     <h4 class="mt-6 font-serif font-bold text-lightGold text-lg">Yüzlerce Arka Plan</h4>
                 </div>
 
-                <!-- Mockup 4 -->
                 <div class="shrink-0 w-60 lg:w-full snap-center flex flex-col items-center group cursor-pointer">
-                    <div class="relative w-full group-hover:-translate-y-2 transition-transform duration-500">
-                        <img src="mockup.png" alt="Phone Frame" class="relative z-20 w-full h-auto drop-shadow-[0_15px_30px_rgba(0,0,0,0.6)] pointer-events-none">
-                        <div class="absolute top-[2.5%] bottom-[2.5%] left-[5.5%] right-[5.5%] z-10 overflow-hidden rounded-[1.5rem] sm:rounded-[2rem] bg-black">
-                            <img src="tr04.png" alt="Menü" class="w-full h-full object-cover">
-                        </div>
+                    <div class="css-mockup w-full group-hover:-translate-y-2 transition-transform duration-500">
+                        <img src="tr04.png" alt="Menü">
                     </div>
                     <h4 class="mt-6 font-serif font-bold text-lightGold text-lg">Geniş Menü</h4>
                 </div>
 
-                <!-- Mockup 5 -->
                 <div class="shrink-0 w-60 lg:w-full snap-center flex flex-col items-center group cursor-pointer">
-                    <div class="relative w-full group-hover:-translate-y-2 transition-transform duration-500">
-                        <img src="mockup.png" alt="Phone Frame" class="relative z-20 w-full h-auto drop-shadow-[0_15px_30px_rgba(0,0,0,0.6)] pointer-events-none">
-                        <div class="absolute top-[2.5%] bottom-[2.5%] left-[5.5%] right-[5.5%] z-10 overflow-hidden rounded-[1.5rem] sm:rounded-[2rem] bg-black">
-                            <img src="tr05.png" alt="Cuma Mesajları" class="w-full h-full object-cover">
-                        </div>
+                    <div class="css-mockup w-full group-hover:-translate-y-2 transition-transform duration-500">
+                        <img src="tr05.png" alt="Cuma Mesajları">
                     </div>
                     <h4 class="mt-6 font-serif font-bold text-lightGold text-lg">Hazır Cuma Mesajları</h4>
                 </div>
 
-                <!-- Mockup 6 -->
                 <div class="shrink-0 w-60 lg:w-full snap-center flex flex-col items-center group cursor-pointer">
-                    <div class="relative w-full group-hover:-translate-y-2 transition-transform duration-500">
-                        <img src="mockup.png" alt="Phone Frame" class="relative z-20 w-full h-auto drop-shadow-[0_15px_30px_rgba(0,0,0,0.6)] pointer-events-none">
-                        <div class="absolute top-[2.5%] bottom-[2.5%] left-[5.5%] right-[5.5%] z-10 overflow-hidden rounded-[1.5rem] sm:rounded-[2rem] bg-black">
-                            <img src="tr06.png" alt="Dualar" class="w-full h-full object-cover">
-                        </div>
+                    <div class="css-mockup w-full group-hover:-translate-y-2 transition-transform duration-500">
+                        <img src="tr06.png" alt="Dualar">
                     </div>
                     <h4 class="mt-6 font-serif font-bold text-lightGold text-lg">Dualar & Sözler</h4>
                 </div>
 
-                <!-- Mockup 7 -->
                 <div class="shrink-0 w-60 lg:w-full snap-center flex flex-col items-center group cursor-pointer">
-                    <div class="relative w-full group-hover:-translate-y-2 transition-transform duration-500">
-                        <img src="mockup.png" alt="Phone Frame" class="relative z-20 w-full h-auto drop-shadow-[0_15px_30px_rgba(0,0,0,0.6)] pointer-events-none">
-                        <div class="absolute top-[2.5%] bottom-[2.5%] left-[5.5%] right-[5.5%] z-10 overflow-hidden rounded-[1.5rem] sm:rounded-[2rem] bg-black">
-                            <img src="tr07.png" alt="Bayramlar" class="w-full h-full object-cover">
-                        </div>
+                    <div class="css-mockup w-full group-hover:-translate-y-2 transition-transform duration-500">
+                        <img src="tr07.png" alt="Bayramlar">
                     </div>
                     <h4 class="mt-6 font-serif font-bold text-lightGold text-lg">Bayram Mesajları</h4>
                 </div>
 
-                <!-- Mockup 8 -->
                 <div class="shrink-0 w-60 lg:w-full snap-center flex flex-col items-center group cursor-pointer">
-                    <div class="relative w-full group-hover:-translate-y-2 transition-transform duration-500">
-                        <img src="mockup.png" alt="Phone Frame" class="relative z-20 w-full h-auto drop-shadow-[0_15px_30px_rgba(0,0,0,0.6)] pointer-events-none">
-                        <div class="absolute top-[2.5%] bottom-[2.5%] left-[5.5%] right-[5.5%] z-10 overflow-hidden rounded-[1.5rem] sm:rounded-[2rem] bg-black">
-                            <img src="tr08.png" alt="Kandiller" class="w-full h-full object-cover">
-                        </div>
+                    <div class="css-mockup w-full group-hover:-translate-y-2 transition-transform duration-500">
+                        <img src="tr08.png" alt="Kandiller">
                     </div>
                     <h4 class="mt-6 font-serif font-bold text-lightGold text-lg">Kandil Tebrikleri</h4>
                 </div>
@@ -431,7 +446,6 @@
         </div>
     </footer>
 
-    <!-- Mobil Menü Fonksiyonu -->
     <script>
         const btn = document.getElementById('mobile-menu-button');
         const menu = document.getElementById('mobile-menu');
