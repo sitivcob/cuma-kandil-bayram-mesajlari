@@ -44,8 +44,8 @@
                         sans: ['Outfit', 'sans-serif'], 
                     },
                     colors: { 
-                        zmr: { 900: '#022c22', 800: '#064e3b', 700: '#047857' }, // Zümrüt Yeşili
-                        altin: { 400: '#fbbf24', 500: '#f59e0b', 600: '#d97706' } // Altın Sarısı
+                        zmr: { 900: '#022c22', 800: '#064e3b', 700: '#047857' },
+                        altin: { 400: '#fbbf24', 500: '#f59e0b', 600: '#d97706' }
                     }
                 }
             }
@@ -53,38 +53,36 @@
     </script>
 
     <style>
-        /* Tooltip (Baloncuk) Animasyonu */
         .tooltip-text { visibility: hidden; opacity: 0; transition: opacity 0.3s ease, transform 0.3s ease; transform: translateY(10px); }
         .group:hover .tooltip-text { visibility: visible; opacity: 1; transform: translateY(0); }
-        /* Camsı (Glassmorphism) Efekt */
         .glass-card { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(16px); border: 1px solid rgba(251, 191, 36, 0.15); }
     </style>
 </head>
 <body class="bg-zmr-900 text-gray-100 font-sans antialiased selection:bg-altin-500 selection:text-zmr-900 relative overflow-x-hidden">
 
-    <!-- Büyüleyici Arkaplan Işıkları -->
     <div class="fixed top-[-10%] left-[-10%] w-[60%] h-[60%] rounded-full bg-altin-600/10 blur-[150px] pointer-events-none -z-10"></div>
     <div class="fixed bottom-[-10%] right-[-10%] w-[60%] h-[60%] rounded-full bg-zmr-700/20 blur-[150px] pointer-events-none -z-10"></div>
 
-    <!-- NAVBAR (Navigasyon & Dil Menüsü) -->
+    <!-- NAVBAR -->
     <nav class="fixed w-full z-50 glass-card border-b-0 border-altin-500/20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
-                <!-- Logo -->
+                
+                <!-- Logo ve Başlık -->
                 <div class="flex items-center gap-4 hover:scale-105 transition-transform duration-300">
-                    <img src="assets/img/ckblogo.png" alt="Uygulama Logosu" class="h-12 w-auto object-contain drop-shadow-[0_0_10px_rgba(251,191,36,0.5)] rounded-xl">
-                    <span class="font-serif font-bold text-xl tracking-wide hidden sm:block text-white">İslami <span class="text-altin-400">Mesajlar</span></span>
+                    <img src="ckblogo.png" alt="Cuma Kandil Bayram Mesajları Logosu" class="h-12 w-auto object-contain drop-shadow-[0_0_10px_rgba(251,191,36,0.5)] rounded-xl">
+                    <span class="font-serif font-bold text-lg tracking-wide hidden sm:block text-white leading-tight">
+                        Cuma Kandil Bayram<br><span class="text-altin-400 text-sm">Mesajları</span>
+                    </span>
                 </div>
                 
-                <!-- Masaüstü Dil Seçici & Menü -->
+                <!-- Masaüstü Dil Seçici -->
                 <div class="hidden md:flex items-center gap-2 bg-black/30 px-4 py-2 rounded-full border border-gray-700/50">
-                    <!-- TR (Aktif) -->
                     <div class="group relative flex flex-col items-center cursor-pointer">
                         <span class="fi fi-tr text-2xl rounded-full border-2 border-altin-400 shadow-[0_0_10px_rgba(251,191,36,0.6)]"></span>
                         <span class="tooltip-text absolute top-10 bg-black text-altin-400 text-xs font-semibold px-3 py-1 rounded-lg border border-altin-500/30 whitespace-nowrap z-50">Türkçe</span>
                     </div>
                     <div class="w-px h-6 bg-gray-700 mx-2"></div>
-                    <!-- Diğer Diller -->
                     <a href="en.html" class="group relative flex flex-col items-center hover:scale-110 transition-transform opacity-50 hover:opacity-100"><span class="fi fi-gb text-xl rounded-full"></span><span class="tooltip-text absolute top-10 bg-black text-white text-xs px-2 py-1 rounded-lg whitespace-nowrap z-50">English</span></a>
                     <a href="de.html" class="group relative flex flex-col items-center hover:scale-110 transition-transform opacity-50 hover:opacity-100"><span class="fi fi-de text-xl rounded-full"></span><span class="tooltip-text absolute top-10 bg-black text-white text-xs px-2 py-1 rounded-lg whitespace-nowrap z-50">Deutsch</span></a>
                     <a href="fr.html" class="group relative flex flex-col items-center hover:scale-110 transition-transform opacity-50 hover:opacity-100"><span class="fi fi-fr text-xl rounded-full"></span><span class="tooltip-text absolute top-10 bg-black text-white text-xs px-2 py-1 rounded-lg whitespace-nowrap z-50">Français</span></a>
@@ -120,9 +118,9 @@
         </div>
     </nav>
 
-    <!-- HERO BÖLÜMÜ (Zarif ve Gösterişli) -->
+    <!-- HERO BÖLÜMÜ -->
     <header class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 px-4 flex flex-col items-center text-center">
-        <span class="text-altin-400 font-medium tracking-widest uppercase text-sm mb-4">Hoş Geldiniz</span>
+        <span class="text-altin-400 font-medium tracking-widest uppercase text-sm mb-4">CUMA KANDİL BAYRAM MESAJLARI</span>
         <h1 class="font-serif text-5xl lg:text-7xl font-bold mb-6 text-white leading-tight max-w-4xl">
             Duygularınızı <br>
             <span class="text-transparent bg-clip-text bg-gradient-to-r from-altin-400 to-yellow-100">En Şık Şekilde</span> İfade Edin.
@@ -132,21 +130,20 @@
         </p>
         
         <a href="https://play.google.com/store/apps/details?id=com.atix.cumakandilbayram" target="_blank" class="hover:scale-105 transition-transform duration-300 hover:drop-shadow-[0_10px_30px_rgba(251,191,36,0.3)]">
-            <img src="assets/img/Google_Play.png" alt="Google Play'den İndir" class="h-16 lg:h-20 w-auto">
+            <img src="Google_Play.png" alt="Google Play'den İndir" class="h-16 lg:h-20 w-auto">
         </a>
     </header>
 
-    <!-- BENTO GRID (Özellikler & 8 Ekran Görüntüsü) -->
+    <!-- BENTO GRID (Özellikler & Ekran Görüntüleri) -->
     <section class="py-20 px-4 max-w-7xl mx-auto">
         <div class="text-center mb-16">
             <h2 class="font-serif text-4xl lg:text-5xl font-bold text-white mb-4">Tek Bir Uygulama, <span class="text-altin-400">Binlerce Mesaj</span></h2>
             <p class="text-gray-400 text-lg">Tasarımlarınızı yüksek çözünürlüklü arka planlar ve asil fontlarla kişiselleştirin.</p>
         </div>
 
-        <!-- Asimetrik Izgara (Bento Box Mimarisi) -->
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4 lg:gap-6">
             
-            <!-- Büyük Kutu: Kendi Kartını Tasarla (tr01 & tr02) -->
+            <!-- Kendi Kartını Tasarla -->
             <div class="col-span-2 md:col-span-2 row-span-2 glass-card rounded-[2rem] p-6 lg:p-10 flex flex-col items-center justify-between group overflow-hidden relative">
                 <div class="absolute inset-0 bg-gradient-to-t from-zmr-900/90 to-transparent z-10"></div>
                 <div class="relative z-20 text-center mb-8">
@@ -154,48 +151,48 @@
                     <p class="text-sm text-gray-300">Yazı tipini, rengi, gölgeleri ayarlayın. Altına kendi imzanızı atın.</p>
                 </div>
                 <div class="flex gap-4 relative z-0 mt-auto transform group-hover:-translate-y-4 transition duration-500">
-                    <img src="assets/img/tr01.png" class="w-1/2 rounded-2xl shadow-2xl border border-gray-700/50 object-cover" alt="Tasarım Aracı">
-                    <img src="assets/img/tr02.png" class="w-1/2 rounded-2xl shadow-2xl border border-gray-700/50 object-cover mt-8" alt="Tasarım Ayarları">
+                    <img src="tr01.png" class="w-1/2 rounded-2xl shadow-2xl border border-gray-700/50 object-cover" alt="Tasarım Aracı">
+                    <img src="tr02.png" class="w-1/2 rounded-2xl shadow-2xl border border-gray-700/50 object-cover mt-8" alt="Tasarım Ayarları">
                 </div>
             </div>
 
-            <!-- Standart Kutu: Arka Planlar (tr03) -->
+            <!-- Arka Planlar -->
             <div class="col-span-2 md:col-span-1 glass-card rounded-[2rem] p-5 flex flex-col items-center group">
                 <h4 class="font-serif text-xl font-bold text-white mb-4">Premium Arka Planlar</h4>
-                <img src="assets/img/tr03.png" class="w-3/4 rounded-2xl shadow-lg transform group-hover:scale-105 transition duration-500" alt="Arka Planlar">
+                <img src="tr03.png" class="w-3/4 rounded-2xl shadow-lg transform group-hover:scale-105 transition duration-500" alt="Arka Planlar">
             </div>
 
-            <!-- Standart Kutu: Menü (tr04) -->
+            <!-- Geniş Kategoriler -->
             <div class="col-span-2 md:col-span-1 glass-card rounded-[2rem] p-5 flex flex-col items-center group">
                 <h4 class="font-serif text-xl font-bold text-white mb-4">Geniş Kategoriler</h4>
-                <img src="assets/img/tr04.png" class="w-3/4 rounded-2xl shadow-lg transform group-hover:scale-105 transition duration-500" alt="Ana Menü">
+                <img src="tr04.png" class="w-3/4 rounded-2xl shadow-lg transform group-hover:scale-105 transition duration-500" alt="Ana Menü">
             </div>
 
-            <!-- Uzun Kutu: Cuma Mesajları (tr05) -->
+            <!-- Cuma Mesajları -->
             <div class="col-span-2 md:col-span-1 row-span-2 glass-card rounded-[2rem] p-5 flex flex-col items-center justify-center group bg-gradient-to-b from-zmr-800/30 to-transparent">
                 <h4 class="font-serif text-xl font-bold text-altin-400 mb-4 text-center">Hazır Mesajlar</h4>
-                <img src="assets/img/tr05.png" class="w-4/5 rounded-2xl shadow-lg transform group-hover:scale-105 transition duration-500" alt="Cuma Mesajları">
+                <img src="tr05.png" class="w-4/5 rounded-2xl shadow-lg transform group-hover:scale-105 transition duration-500" alt="Cuma Mesajları">
             </div>
 
-            <!-- Standart Kutu: Mübarek Sözler (tr06) -->
+            <!-- Mübarek Sözler -->
             <div class="col-span-1 md:col-span-1 glass-card rounded-[2rem] p-4 flex flex-col justify-center items-center">
-                <img src="assets/img/tr06.png" class="w-full rounded-xl shadow-lg opacity-90 hover:opacity-100 transition" alt="Dualar">
+                <img src="tr06.png" class="w-full rounded-xl shadow-lg opacity-90 hover:opacity-100 transition" alt="Dualar">
                 <span class="mt-3 text-sm text-gray-400 font-medium">Dualar & Sözler</span>
             </div>
 
-            <!-- Standart Kutu: Bayramlar (tr07) -->
+            <!-- Bayramlar -->
             <div class="col-span-1 md:col-span-1 glass-card rounded-[2rem] p-4 flex flex-col justify-center items-center">
-                <img src="assets/img/tr07.png" class="w-full rounded-xl shadow-lg opacity-90 hover:opacity-100 transition" alt="Bayramlar">
+                <img src="tr07.png" class="w-full rounded-xl shadow-lg opacity-90 hover:opacity-100 transition" alt="Bayramlar">
                 <span class="mt-3 text-sm text-gray-400 font-medium">Dini Bayramlar</span>
             </div>
 
-            <!-- Yatay Kutu: Kandiller (tr08) -->
+            <!-- Kandiller -->
             <div class="col-span-2 md:col-span-2 glass-card rounded-[2rem] p-6 flex flex-col sm:flex-row items-center gap-6 group">
                 <div class="flex-1 text-center sm:text-left">
                     <h4 class="font-serif text-2xl font-bold text-white mb-2">Mübarek Kandiller</h4>
                     <p class="text-sm text-gray-400">Regaip, Miraç, Berat ve Kadir Gecesi'ne özel huzur dolu tebrikler.</p>
                 </div>
-                <img src="assets/img/tr08.png" class="w-1/2 sm:w-1/3 rounded-2xl shadow-lg transform group-hover:rotate-2 transition duration-500" alt="Kandiller">
+                <img src="tr08.png" class="w-1/2 sm:w-1/3 rounded-2xl shadow-lg transform group-hover:rotate-2 transition duration-500" alt="Kandiller">
             </div>
 
         </div>
@@ -206,14 +203,14 @@
         <div class="max-w-7xl mx-auto px-4 py-12 flex flex-col items-center text-center">
             <h2 class="font-serif text-3xl font-bold text-white mb-6">Hemen İndirin, Sevginizi Paylaşın!</h2>
             <a href="https://play.google.com/store/apps/details?id=com.atix.cumakandilbayram" target="_blank" class="mb-10 hover:scale-105 transition-transform">
-                <img src="assets/img/Google_Play.png" alt="Google Play" class="h-16 w-auto">
+                <img src="Google_Play.png" alt="Google Play" class="h-16 w-auto">
             </a>
             
             <div class="flex gap-6 text-sm text-gray-400 font-medium">
                 <a href="privacy-policy.html" class="hover:text-altin-400 transition">Gizlilik Politikası (Privacy Policy)</a>
             </div>
             <p class="mt-6 text-xs text-gray-600">
-                &copy; 2026 İslami Mesajlar & Kartlar. Tüm hakları saklıdır.
+                &copy; 2026 Cuma Kandil Bayram Mesajları. Tüm hakları saklıdır.
             </p>
         </div>
     </footer>
