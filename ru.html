@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Исламские поздравления и дуа | Свой дизайн карт</title>
+    <meta name="description" content="Исламские поздравления, открытки на Рамадан, Курбан и Джума. Создайте свой дизайн карт.">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Исламские поздравления и дуа" />
+    <meta property="og:description" content="Исламские поздравления, открытки на Рамадан, Курбан и Джума. Свой дизайн карт." />
+    <meta property="og:image" content="https://sitivcob.github.io/cuma-kandil-bayram-mesajlari/assets/img/ckblogo.png" />
+    <meta property="og:url" content="https://sitivcob.github.io/cuma-kandil-bayram-mesajlari/ru.html" />
+    <meta property="og:type" content="website" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Исламские поздравления и дуа" />
+    <meta name="twitter:description" content="Исламские поздравления, открытки на Рамадан, Курбан и Джума." />
+    <meta name="twitter:image" content="https://sitivcob.github.io/cuma-kandil-bayram-mesajlari/assets/img/ru01.png" />
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.0.0/css/flag-icons.min.css"/>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Outfit', 'sans-serif'], serif: ['Playfair Display', 'serif'] },
+                    colors: { deepGreen: '#022c22', cardGreen: '#064e3b', gold: '#d97706', lightGold: '#fde68a' },
+                    animation: { 'float': 'float 6s ease-in-out infinite' },
+                    keyframes: { float: { '0%, 100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-15px)' } } }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .tooltip-text { visibility: hidden; opacity: 0; transition: all 0.3s ease; transform: translateY(10px); }
+        .group:hover .tooltip-text { visibility: visible; opacity: 1; transform: translateY(0); }
+        .glass-card { background: rgba(6, 78, 59, 0.4); backdrop-filter: blur(20px); border: 1px solid rgba(217, 119, 6, 0.2); box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3); }
+        .hide-scroll::-webkit-scrollbar { display: none; }
+        .hide-scroll { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-deepGreen text-gray-200 font-sans antialiased selection:bg-gold selection:text-white relative overflow-x-hidden">
+
+    <div class="fixed top-[-20%] left-[-10%] w-[50%] h-[50%] rounded-full bg-gold/10 blur-[150px] pointer-events-none -z-10"></div>
+    <div class="fixed bottom-[-20%] right-[-10%] w-[50%] h-[50%] rounded-full bg-emerald-500/10 blur-[150px] pointer-events-none -z-10"></div>
+
+    <!-- NAVBAR -->
+    <nav class="fixed w-full z-50 glass-card border-b-0 border-gold/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-24">
+                
+                <div class="flex items-center gap-4 hover:scale-105 transition-transform duration-300">
+                    <img src="assets/img/ckblogo.png" alt="App Logo" class="h-12 lg:h-14 w-auto object-contain rounded-xl shadow-[0_0_15px_rgba(217,119,6,0.4)] border border-gold/30">
+                    <div class="hidden sm:flex flex-col">
+                        <span class="font-serif font-bold text-xl tracking-wide text-white leading-tight">Исламские</span>
+                        <span class="text-gold text-sm font-medium tracking-widest uppercase">поздравления и дуа</span>
+                    </div>
+                </div>
+                
+                <div class="hidden md:flex space-x-6 items-center">
+                    <a href="#features" class="text-emerald-100 hover:text-lightGold transition font-medium">Функции</a>
+                    <a href="#categories" class="text-emerald-100 hover:text-lightGold transition font-medium">Категории</a>
+                    <a href="#gallery" class="text-emerald-100 hover:text-lightGold transition font-medium">Экраны</a>
+                    
+                    <div class="flex items-center gap-2 ml-4 pl-6 border-l border-emerald-800/50 text-xl bg-deepGreen/50 px-4 py-2 rounded-full">
+                        <a href="index.html" class="group relative flex flex-col items-center opacity-60 hover:opacity-100 transition hover:scale-110"><span class="fi fi-tr rounded-full"></span></a>
+                        <a href="en.html" class="group relative flex flex-col items-center opacity-60 hover:opacity-100 transition hover:scale-110"><span class="fi fi-gb rounded-full"></span></a>
+                        <a href="de.html" class="group relative flex flex-col items-center opacity-60 hover:opacity-100 transition hover:scale-110"><span class="fi fi-de rounded-full"></span></a>
+                        <a href="fr.html" class="group relative flex flex-col items-center opacity-60 hover:opacity-100 transition hover:scale-110"><span class="fi fi-fr rounded-full"></span></a>
+                        <a href="ar.html" class="group relative flex flex-col items-center opacity-60 hover:opacity-100 transition hover:scale-110"><span class="fi fi-sa rounded-full"></span></a>
+                        <a href="fa.html" class="group relative flex flex-col items-center opacity-60 hover:opacity-100 transition hover:scale-110"><span class="fi fi-ir rounded-full"></span></a>
+                        <a href="ur.html" class="group relative flex flex-col items-center opacity-60 hover:opacity-100 transition hover:scale-110"><span class="fi fi-pk rounded-full"></span></a>
+                        <a href="hi.html" class="group relative flex flex-col items-center opacity-60 hover:opacity-100 transition hover:scale-110"><span class="fi fi-in rounded-full"></span></a>
+                        <a href="id.html" class="group relative flex flex-col items-center opacity-60 hover:opacity-100 transition hover:scale-110"><span class="fi fi-id rounded-full"></span></a>
+                        
+                        <!-- ACTIVE FLAG (RUSSIAN) -->
+                        <div class="group relative flex flex-col items-center cursor-pointer">
+                            <span class="fi fi-ru rounded-full shadow-[0_0_10px_rgba(217,119,6,0.8)] border border-gold scale-110"></span>
+                            <span class="tooltip-text absolute top-10 bg-deepGreen border border-gold/50 text-lightGold text-xs font-bold px-3 py-1.5 rounded-lg shadow-xl whitespace-nowrap">Русский</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-3">
+                    <button id="mobile-menu-button" class="md:hidden text-gold hover:text-lightGold focus:outline-none text-2xl">
+                        <i class="fa-solid fa-bars-staggered"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-deepGreen border-b border-emerald-900/50 absolute w-full left-0 top-24 transition-all shadow-[0_30px_60px_rgba(0,0,0,0.8)] z-50">
+            <div class="px-4 pt-4 pb-8 flex flex-col space-y-4 text-center">
+                <a href="#features" class="text-emerald-100 hover:text-gold font-medium text-lg">Функции</a>
+                <a href="#categories" class="text-emerald-100 hover:text-gold font-medium text-lg">Категории</a>
+                <a href="#gallery" class="text-emerald-100 hover:text-gold font-medium text-lg">Экраны</a>
+                
+                <div class="pt-6 mt-4 border-t border-emerald-800/50 grid grid-cols-5 gap-y-6 justify-items-center text-3xl">
+                    <a href="index.html" class="fi fi-tr rounded-full opacity-60"></a>
+                    <a href="en.html" class="fi fi-gb rounded-full opacity-60"></a>
+                    <a href="de.html" class="fi fi-de rounded-full opacity-60"></a>
+                    <a href="fr.html" class="fi fi-fr rounded-full opacity-60"></a>
+                    <a href="ar.html" class="fi fi-sa rounded-full opacity-60"></a>
+                    <a href="fa.html" class="fi fi-ir rounded-full opacity-60"></a>
+                    <a href="ur.html" class="fi fi-pk rounded-full opacity-60"></a>
+                    <a href="hi.html" class="fi fi-in rounded-full opacity-60"></a>
+                    <a href="id.html" class="fi fi-id rounded-full opacity-60"></a>
+                    <span class="fi fi-ru rounded-full border-2 border-gold opacity-100 shadow-[0_0_10px_rgba(217,119,6,0.8)]"></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="pt-36 pb-20 lg:pt-52 lg:pb-32 px-4 overflow-hidden relative border-b border-emerald-900/50">
+        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+            
+            <div class="flex-1 text-center lg:text-left z-10">
+                <div class="inline-flex items-center px-4 py-2 rounded-full border border-gold/40 bg-gold/10 text-lightGold text-sm font-semibold mb-8 shadow-[0_0_15px_rgba(217,119,6,0.15)]">
+                    <i class="fa-solid fa-leaf text-gold mr-2"></i>
+                    Огромная коллекция открыток
+                </div>
+                
+                <h1 class="text-5xl sm:text-6xl lg:text-7xl font-serif font-bold tracking-tight mb-6 leading-tight text-white">
+                    Выразите свои чувства <br>
+                    <span class="italic text-transparent bg-clip-text bg-gradient-to-r from-gold to-yellow-200">с элегантностью.</span>
+                </h1>
+                
+                <p class="text-lg text-emerald-100/80 mb-10 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-light">
+                    Ищете душевные исламские поздравления, искренние дуа или красивые открытки? Наше приложение — это ваш полноценный путеводитель.
+                </p>
+                
+                <div class="flex flex-col items-center lg:items-start gap-6">
+                    <div class="flex flex-col sm:flex-row items-center gap-5">
+                        <a href="https://play.google.com/store/apps/details?id=com.sitiv.cumakandilbayram" target="_blank" rel="noopener noreferrer" class="inline-block transform hover:-translate-y-1 transition duration-300 hover:drop-shadow-[0_0_20px_rgba(217,119,6,0.4)]">
+                            <img src="assets/img/Google_Play.png" alt="Скачать в Google Play" class="h-16 lg:h-20 w-auto object-contain">
+                        </a>
+                        <a href="#features" class="px-8 py-4 rounded-xl font-bold text-lg text-deepGreen bg-gradient-to-r from-gold to-yellow-400 hover:from-yellow-400 hover:to-gold transition-all shadow-[0_0_15px_rgba(217,119,6,0.4)]">
+                            Обзор функций
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="flex-1 relative w-full max-w-[18rem] sm:max-w-[22rem] lg:max-w-[26rem] mx-auto flex items-center justify-center animate-float z-20">
+                <div class="absolute inset-0 bg-gold/20 blur-[100px] rounded-full z-0 pointer-events-none"></div>
+                <img src="assets/img/ru01.png" alt="Design Screen" class="relative z-10 w-full h-auto drop-shadow-[0_20px_40px_rgba(217,119,6,0.5)]">
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section id="features" class="py-24 glass-card border-y border-emerald-900/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-5xl font-serif font-bold mb-4 tracking-tight text-white">Почему вам это понравится</h2>
+                <p class="text-emerald-200/70 max-w-2xl mx-auto text-lg font-light">Превратите слова и чувства в настоящее визуальное искусство.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-deepGreen/80 p-8 rounded-[2rem] border border-emerald-800/60 hover:border-gold/50 hover:bg-cardGreen/50 transition-all duration-500 group shadow-lg">
+                    <div class="w-16 h-16 bg-gold/10 rounded-2xl flex items-center justify-center text-gold text-3xl mb-6 group-hover:scale-110 transition-transform shadow-[0_0_20px_rgba(217,119,6,0.15)]">
+                        <i class="fa-solid fa-palette"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-bold mb-3 text-white">Создавайте открытки</h3>
+                    <p class="text-emerald-100/60 text-sm leading-relaxed">Полная кастомизация: элегантные шрифты, цвета, тени и фоны для создания уникальных открыток.</p>
+                </div>
+                <div class="bg-deepGreen/80 p-8 rounded-[2rem] border border-emerald-800/60 hover:border-gold/50 hover:bg-cardGreen/50 transition-all duration-500 group shadow-lg">
+                    <div class="w-16 h-16 bg-gold/10 rounded-2xl flex items-center justify-center text-gold text-3xl mb-6 group-hover:scale-110 transition-transform shadow-[0_0_20px_rgba(217,119,6,0.15)]">
+                        <i class="fa-solid fa-signature"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-bold mb-3 text-white">Добавьте подпись</h3>
+                    <p class="text-emerald-100/60 text-sm leading-relaxed">Добавьте свою подпись или имя в угол открытки для создания персонального штриха.</p>
+                </div>
+                <div class="bg-deepGreen/80 p-8 rounded-[2rem] border border-emerald-800/60 hover:border-gold/50 hover:bg-cardGreen/50 transition-all duration-500 group shadow-lg">
+                    <div class="w-16 h-16 bg-gold/10 rounded-2xl flex items-center justify-center text-gold text-3xl mb-6 group-hover:scale-110 transition-transform shadow-[0_0_20px_rgba(217,119,6,0.15)]">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-bold mb-3 text-white">Легко делиться</h3>
+                    <p class="text-emerald-100/60 text-sm leading-relaxed">Мгновенно делитесь в WhatsApp, Instagram, Telegram в один клик. Идеально для историй.</p>
+                </div>
+                <div class="bg-deepGreen/80 p-8 rounded-[2rem] border border-emerald-800/60 hover:border-gold/50 hover:bg-cardGreen/50 transition-all duration-500 group shadow-lg">
+                    <div class="w-16 h-16 bg-gold/10 rounded-2xl flex items-center justify-center text-gold text-3xl mb-6 group-hover:scale-110 transition-transform shadow-[0_0_20px_rgba(217,119,6,0.15)]">
+                        <i class="fa-solid fa-book-open"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-bold mb-3 text-white">Мудрость каждый день</h3>
+                    <p class="text-emerald-100/60 text-sm leading-relaxed">Наполняйте свой день исламскими цитатами и напоминаниями, которые укрепляют веру.</p>
+                </div>
+                <div class="bg-deepGreen/80 p-8 rounded-[2rem] border border-emerald-800/60 hover:border-gold/50 hover:bg-cardGreen/50 transition-all duration-500 group shadow-lg">
+                    <div class="w-16 h-16 bg-gold/10 rounded-2xl flex items-center justify-center text-gold text-3xl mb-6 group-hover:scale-110 transition-transform shadow-[0_0_20px_rgba(217,119,6,0.15)]">
+                        <i class="fa-solid fa-wifi"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-bold mb-3 text-white">Офлайн доступ</h3>
+                    <p class="text-emerald-100/60 text-sm leading-relaxed">Сохраняйте любимые открытки на телефон и используйте их в любое время без интернета.</p>
+                </div>
+                <div class="bg-deepGreen/80 p-8 rounded-[2rem] border border-emerald-800/60 hover:border-gold/50 hover:bg-cardGreen/50 transition-all duration-500 group shadow-lg">
+                    <div class="w-16 h-16 bg-gold/10 rounded-2xl flex items-center justify-center text-gold text-3xl mb-6 group-hover:scale-110 transition-transform shadow-[0_0_20px_rgba(217,119,6,0.15)]">
+                        <i class="fa-solid fa-calendar-check"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-bold mb-3 text-white">Религиозный календарь</h3>
+                    <p class="text-emerald-100/60 text-sm leading-relaxed">Легко отслеживайте предстоящие исламские праздники и ночи благословений с нашими уведомлениями.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CATEGORIES -->
+    <section id="categories" class="py-24 bg-deepGreen border-t border-emerald-900/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center gap-16">
+            <div class="flex-1">
+                <h2 class="text-3xl lg:text-5xl font-serif font-bold mb-8 tracking-tight text-white">Полная коллекция</h2>
+                <div class="space-y-6">
+                    <div class="bg-cardGreen/30 p-6 rounded-2xl border border-emerald-800/60 hover:border-gold/50 transition-all flex items-start group">
+                        <div class="mt-1 w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center text-gold text-xl shrink-0 group-hover:bg-gold group-hover:text-deepGreen transition-colors"><i class="fa-solid fa-mosque"></i></div>
+                        <div class="ml-5">
+                            <h4 class="font-serif font-bold text-xl text-white">Праздники и Ночи</h4>
+                            <p class="text-emerald-100/70 text-sm mt-2 leading-relaxed">Джума Мубарак, Мавлид ан-Наби, Ляйлят аль-Кадр, Ураза Байрам и Курбан Байрам.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-cardGreen/30 p-6 rounded-2xl border border-emerald-800/60 hover:border-gold/50 transition-all flex items-start group">
+                        <div class="mt-1 w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center text-gold text-xl shrink-0 group-hover:bg-gold group-hover:text-deepGreen transition-colors"><i class="fa-solid fa-hands-praying"></i></div>
+                        <div class="ml-5">
+                            <h4 class="font-serif font-bold text-xl text-white">Духовные дуа</h4>
+                            <p class="text-emerald-100/70 text-sm mt-2 leading-relaxed">Повседневные дуа, молитвы за родителей, терпение и слова соболезнования.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-cardGreen/30 p-6 rounded-2xl border border-emerald-800/60 hover:border-gold/50 transition-all flex items-start group">
+                        <div class="mt-1 w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center text-gold text-xl shrink-0 group-hover:bg-gold group-hover:text-deepGreen transition-colors"><i class="fa-solid fa-sun"></i></div>
+                        <div class="ml-5">
+                            <h4 class="font-serif font-bold text-xl text-white">Ежедневные приветствия</h4>
+                            <p class="text-emerald-100/70 text-sm mt-2 leading-relaxed">Пожелания доброго утра, спокойной ночи и благословенные ежедневные сообщения.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="flex-1 w-full bg-gradient-to-br from-cardGreen to-deepGreen rounded-[2.5rem] p-10 border border-gold/30 shadow-[0_20px_50px_rgba(0,0,0,0.6)] relative overflow-hidden flex flex-col justify-center">
+                <div class="absolute top-0 right-0 w-40 h-40 bg-gold/20 rounded-full blur-3xl"></div>
+                <div class="absolute bottom-0 left-0 w-40 h-40 bg-emerald-500/10 rounded-full blur-3xl"></div>
+                
+                <i class="fa-solid fa-quote-left text-5xl text-gold/30 mb-6 relative z-10"></i>
+                <p class="font-serif text-2xl lg:text-3xl text-white leading-relaxed mb-8 relative z-10 italic">
+                    "Распространяйте благословение, любовь и братство среди семьи и друзей с помощью лучших исламских дизайнов."
+                </p>
+                <div class="border-l-4 border-gold pl-5 relative z-10">
+                    <p class="text-lightGold font-bold text-lg tracking-wide">Делитесь самыми красивыми пожеланиями.</p>
+                    <p class="text-emerald-100/60 text-sm mt-2">Скачайте прямо сейчас!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY (6 IMAGES FOR RU) -->
+    <section id="gallery" class="py-24 glass-card border-t border-emerald-900/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-5xl font-serif font-bold mb-4 tracking-tight text-white">Экраны приложения</h2>
+                <p class="text-emerald-200/70 max-w-2xl mx-auto text-lg font-light">Простой, элегантный и удобный интерфейс.</p>
+            </div>
+
+            <!-- 6 Images Grid -->
+            <div class="flex overflow-x-auto gap-4 pb-10 hide-scroll snap-x snap-mandatory lg:grid lg:grid-cols-3 lg:gap-10 lg:overflow-visible">
+                
+                <div class="shrink-0 w-64 lg:w-full snap-center flex flex-col items-center group cursor-pointer p-2">
+                    <img src="assets/img/ru01.png" alt="Инструмент дизайна" class="w-full h-auto drop-shadow-[0_15px_25px_rgba(0,0,0,0.5)] group-hover:drop-shadow-[0_20px_40px_rgba(217,119,6,0.6)] group-hover:-translate-y-4 group-hover:scale-105 transition-all duration-500">
+                    <h4 class="mt-6 font-serif font-bold text-lightGold text-lg group-hover:text-gold transition-colors">Инструмент дизайна</h4>
+                </div>
+
+                <div class="shrink-0 w-64 lg:w-full snap-center flex flex-col items-center group cursor-pointer p-2">
+                    <img src="assets/img/ru02.png" alt="Фоны" class="w-full h-auto drop-shadow-[0_15px_25px_rgba(0,0,0,0.5)] group-hover:drop-shadow-[0_20px_40px_rgba(217,119,6,0.6)] group-hover:-translate-y-4 group-hover:scale-105 transition-all duration-500">
+                    <h4 class="mt-6 font-serif font-bold text-lightGold text-lg group-hover:text-gold transition-colors">Фоны</h4>
+                </div>
+
+                <div class="shrink-0 w-64 lg:w-full snap-center flex flex-col items-center group cursor-pointer p-2">
+                    <img src="assets/img/ru03.png" alt="Главное меню" class="w-full h-auto drop-shadow-[0_15px_25px_rgba(0,0,0,0.5)] group-hover:drop-shadow-[0_20px_40px_rgba(217,119,6,0.6)] group-hover:-translate-y-4 group-hover:scale-105 transition-all duration-500">
+                    <h4 class="mt-6 font-serif font-bold text-lightGold text-lg group-hover:text-gold transition-colors">Главное меню</h4>
+                </div>
+
+                <div class="shrink-0 w-64 lg:w-full snap-center flex flex-col items-center group cursor-pointer p-2">
+                    <img src="assets/img/ru04.png" alt="Готовые сообщения" class="w-full h-auto drop-shadow-[0_15px_25px_rgba(0,0,0,0.5)] group-hover:drop-shadow-[0_20px_40px_rgba(217,119,6,0.6)] group-hover:-translate-y-4 group-hover:scale-105 transition-all duration-500">
+                    <h4 class="mt-6 font-serif font-bold text-lightGold text-lg group-hover:text-gold transition-colors">Готовые сообщения</h4>
+                </div>
+
+                <div class="shrink-0 w-64 lg:w-full snap-center flex flex-col items-center group cursor-pointer p-2">
+                    <img src="assets/img/ru05.png" alt="Дуа и Молитвы" class="w-full h-auto drop-shadow-[0_15px_25px_rgba(0,0,0,0.5)] group-hover:drop-shadow-[0_20px_40px_rgba(217,119,6,0.6)] group-hover:-translate-y-4 group-hover:scale-105 transition-all duration-500">
+                    <h4 class="mt-6 font-serif font-bold text-lightGold text-lg group-hover:text-gold transition-colors">Дуа и Молитвы</h4>
+                </div>
+
+                <div class="shrink-0 w-64 lg:w-full snap-center flex flex-col items-center group cursor-pointer p-2">
+                    <img src="assets/img/ru06.png" alt="Священные ночи и Ид" class="w-full h-auto drop-shadow-[0_15px_25px_rgba(0,0,0,0.5)] group-hover:drop-shadow-[0_20px_40px_rgba(217,119,6,0.6)] group-hover:-translate-y-4 group-hover:scale-105 transition-all duration-500">
+                    <h4 class="mt-6 font-serif font-bold text-lightGold text-lg group-hover:text-gold transition-colors">Священные ночи и Ид</h4>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#011a14] py-16 border-t border-gold/20 relative">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-serif font-bold mb-4 text-white">Скачайте сейчас!</h2>
+            <p class="text-emerald-100/60 mb-8 leading-relaxed text-base font-light">
+                Наше приложение совершенно бесплатно. Создавайте открытки и выражайте свои чувства с элегантностью.
+            </p>
+            
+            <a href="https://play.google.com/store/apps/details?id=com.sitiv.cumakandilbayram" target="_blank" rel="noopener noreferrer" class="inline-block transform hover:-translate-y-1 transition duration-300 hover:drop-shadow-[0_0_25px_rgba(217,119,6,0.4)] mb-10">
+                <img src="assets/img/Google_Play.png" alt="Скачать в Google Play" class="h-16 lg:h-20 w-auto object-contain">
+            </a>
+
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 text-sm text-emerald-100/40 border-t border-emerald-900 pt-8">
+                <a href="https://docs.google.com/document/d/1se12jpj3VZfuHtXRXwn6x3jt23NGt8h0-v9zR--hKxM/edit?usp=sharing" target="_blank" rel="noopener noreferrer" class="hover:text-gold transition font-medium">Политика конфиденциальности</a>
+                <span>&copy; 2026 Исламские поздравления и дуа. Все права защищены.</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const btn = document.getElementById('mobile-menu-button');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => { menu.classList.toggle('hidden'); });
+    </script>
+</body>
+</html>
